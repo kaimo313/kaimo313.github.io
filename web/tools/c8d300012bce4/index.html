@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>the-super-tiny-compiler | 卡夫卡的岛上书店</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/blogs/blogs/favicon.ico">
+    <meta name="description" content="卡夫卡的岛上书店是凯小默的个人博客，用于记录学习笔记、分享音乐、书籍、旅行等个人兴趣的站点。">
+    <meta name="keywords" content="凯小默,凯小默的博客,博客,个人博客,vue,vuejs,vuepress,vuepress-theme-reco,卡夫卡,岛上书店,卡夫卡的岛上书店,音乐,电影,书籍">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/blogs/assets/css/0.styles.7a0dfb7e.css" as="style"><link rel="preload" href="/blogs/assets/js/app.b6577c57.js" as="script"><link rel="preload" href="/blogs/assets/js/2.44f167e6.js" as="script"><link rel="preload" href="/blogs/assets/js/105.37d6cfdf.js" as="script"><link rel="preload" href="/blogs/assets/js/10.3a18c1d1.js" as="script"><link rel="prefetch" href="/blogs/assets/js/100.61348934.js"><link rel="prefetch" href="/blogs/assets/js/101.42e6df4a.js"><link rel="prefetch" href="/blogs/assets/js/102.6a2750c2.js"><link rel="prefetch" href="/blogs/assets/js/103.0ff299f9.js"><link rel="prefetch" href="/blogs/assets/js/104.3b570960.js"><link rel="prefetch" href="/blogs/assets/js/106.1dfdd5aa.js"><link rel="prefetch" href="/blogs/assets/js/107.27a87e39.js"><link rel="prefetch" href="/blogs/assets/js/108.36db6d97.js"><link rel="prefetch" href="/blogs/assets/js/109.bd3f60c5.js"><link rel="prefetch" href="/blogs/assets/js/11.82fbfbb6.js"><link rel="prefetch" href="/blogs/assets/js/110.5633993c.js"><link rel="prefetch" href="/blogs/assets/js/111.4557a9aa.js"><link rel="prefetch" href="/blogs/assets/js/112.f71fc74e.js"><link rel="prefetch" href="/blogs/assets/js/113.d999e553.js"><link rel="prefetch" href="/blogs/assets/js/114.4410179e.js"><link rel="prefetch" href="/blogs/assets/js/115.1e9773e3.js"><link rel="prefetch" href="/blogs/assets/js/116.212695ab.js"><link rel="prefetch" href="/blogs/assets/js/117.006d9038.js"><link rel="prefetch" href="/blogs/assets/js/118.b47f7110.js"><link rel="prefetch" href="/blogs/assets/js/119.286ab222.js"><link rel="prefetch" href="/blogs/assets/js/12.8b07f727.js"><link rel="prefetch" href="/blogs/assets/js/120.90205ba7.js"><link rel="prefetch" href="/blogs/assets/js/121.5beb3d8c.js"><link rel="prefetch" href="/blogs/assets/js/122.7ab018ab.js"><link rel="prefetch" href="/blogs/assets/js/123.843ac3bb.js"><link rel="prefetch" href="/blogs/assets/js/124.f04c46cb.js"><link rel="prefetch" href="/blogs/assets/js/125.6d88bedc.js"><link rel="prefetch" href="/blogs/assets/js/126.5bfac816.js"><link rel="prefetch" href="/blogs/assets/js/127.2a7e4b14.js"><link rel="prefetch" href="/blogs/assets/js/128.59661175.js"><link rel="prefetch" href="/blogs/assets/js/129.36dade94.js"><link rel="prefetch" href="/blogs/assets/js/13.6b3d22fb.js"><link rel="prefetch" href="/blogs/assets/js/130.f61ee012.js"><link rel="prefetch" href="/blogs/assets/js/131.5ed7262d.js"><link rel="prefetch" href="/blogs/assets/js/132.9bf07050.js"><link rel="prefetch" href="/blogs/assets/js/133.cd691efa.js"><link rel="prefetch" href="/blogs/assets/js/134.d4b30918.js"><link rel="prefetch" href="/blogs/assets/js/135.0889a1e6.js"><link rel="prefetch" href="/blogs/assets/js/136.69cb5efa.js"><link rel="prefetch" href="/blogs/assets/js/137.0d5860ba.js"><link rel="prefetch" href="/blogs/assets/js/138.0ddd14b5.js"><link rel="prefetch" href="/blogs/assets/js/139.042053c1.js"><link rel="prefetch" href="/blogs/assets/js/14.5d4e7a64.js"><link rel="prefetch" href="/blogs/assets/js/140.58984eaa.js"><link rel="prefetch" href="/blogs/assets/js/141.e517a3c5.js"><link rel="prefetch" href="/blogs/assets/js/142.3ac7fced.js"><link rel="prefetch" href="/blogs/assets/js/143.2732c57b.js"><link rel="prefetch" href="/blogs/assets/js/144.c88252d1.js"><link rel="prefetch" href="/blogs/assets/js/145.ad5589ae.js"><link rel="prefetch" href="/blogs/assets/js/146.40250fde.js"><link rel="prefetch" href="/blogs/assets/js/147.4fa20f68.js"><link rel="prefetch" href="/blogs/assets/js/148.efce1d32.js"><link rel="prefetch" href="/blogs/assets/js/149.f8b4e8e9.js"><link rel="prefetch" href="/blogs/assets/js/15.dd270c50.js"><link rel="prefetch" href="/blogs/assets/js/150.5e2c993b.js"><link rel="prefetch" href="/blogs/assets/js/151.26e2eb05.js"><link rel="prefetch" href="/blogs/assets/js/152.466c45c9.js"><link rel="prefetch" href="/blogs/assets/js/153.fb4bc7db.js"><link rel="prefetch" href="/blogs/assets/js/154.1581847e.js"><link rel="prefetch" href="/blogs/assets/js/155.598b4be9.js"><link rel="prefetch" href="/blogs/assets/js/156.348bd2b2.js"><link rel="prefetch" href="/blogs/assets/js/157.f621e49c.js"><link rel="prefetch" href="/blogs/assets/js/158.2b5f3013.js"><link rel="prefetch" href="/blogs/assets/js/159.6214913e.js"><link rel="prefetch" href="/blogs/assets/js/16.89c35137.js"><link rel="prefetch" href="/blogs/assets/js/160.00f7d0b6.js"><link rel="prefetch" href="/blogs/assets/js/161.04fe0063.js"><link rel="prefetch" href="/blogs/assets/js/162.2f60c4fc.js"><link rel="prefetch" href="/blogs/assets/js/163.d24d684b.js"><link rel="prefetch" href="/blogs/assets/js/164.a22c8ce6.js"><link rel="prefetch" href="/blogs/assets/js/165.29df00c2.js"><link rel="prefetch" href="/blogs/assets/js/166.266719f5.js"><link rel="prefetch" href="/blogs/assets/js/167.6fd7fee8.js"><link rel="prefetch" href="/blogs/assets/js/168.a172abbc.js"><link rel="prefetch" href="/blogs/assets/js/169.198b869c.js"><link rel="prefetch" href="/blogs/assets/js/17.59a993c4.js"><link rel="prefetch" href="/blogs/assets/js/170.998b2f15.js"><link rel="prefetch" href="/blogs/assets/js/171.92c054fa.js"><link rel="prefetch" href="/blogs/assets/js/172.731e2473.js"><link rel="prefetch" href="/blogs/assets/js/173.ba3ff148.js"><link rel="prefetch" href="/blogs/assets/js/174.2ae915d3.js"><link rel="prefetch" href="/blogs/assets/js/175.dfc3341b.js"><link rel="prefetch" href="/blogs/assets/js/176.81677471.js"><link rel="prefetch" href="/blogs/assets/js/177.814d7c87.js"><link rel="prefetch" href="/blogs/assets/js/178.24b1b2df.js"><link rel="prefetch" href="/blogs/assets/js/179.95268dfb.js"><link rel="prefetch" href="/blogs/assets/js/18.3c7337d8.js"><link rel="prefetch" href="/blogs/assets/js/180.462b461f.js"><link rel="prefetch" href="/blogs/assets/js/181.1ee71c3d.js"><link rel="prefetch" href="/blogs/assets/js/182.78063d7a.js"><link rel="prefetch" href="/blogs/assets/js/183.a19bc5ff.js"><link rel="prefetch" href="/blogs/assets/js/184.7360e730.js"><link rel="prefetch" href="/blogs/assets/js/185.91647c2b.js"><link rel="prefetch" href="/blogs/assets/js/186.b4d5fbd8.js"><link rel="prefetch" href="/blogs/assets/js/187.cea7dd6e.js"><link rel="prefetch" href="/blogs/assets/js/188.0f474d25.js"><link rel="prefetch" href="/blogs/assets/js/189.9f1ea486.js"><link rel="prefetch" href="/blogs/assets/js/19.27625bd6.js"><link rel="prefetch" href="/blogs/assets/js/190.741abdcd.js"><link rel="prefetch" href="/blogs/assets/js/191.fb951065.js"><link rel="prefetch" href="/blogs/assets/js/192.992c1657.js"><link rel="prefetch" href="/blogs/assets/js/193.13763adc.js"><link rel="prefetch" href="/blogs/assets/js/194.0e541d84.js"><link rel="prefetch" href="/blogs/assets/js/195.56068487.js"><link rel="prefetch" href="/blogs/assets/js/196.2b45f3a3.js"><link rel="prefetch" href="/blogs/assets/js/197.dbdaf478.js"><link rel="prefetch" href="/blogs/assets/js/198.4d38424f.js"><link rel="prefetch" href="/blogs/assets/js/199.60402a1e.js"><link rel="prefetch" href="/blogs/assets/js/20.6a1cd4b0.js"><link rel="prefetch" href="/blogs/assets/js/200.022d44fb.js"><link rel="prefetch" href="/blogs/assets/js/201.f709417f.js"><link rel="prefetch" href="/blogs/assets/js/202.fcf42b43.js"><link rel="prefetch" href="/blogs/assets/js/203.46ea886e.js"><link rel="prefetch" href="/blogs/assets/js/204.fb70e5a5.js"><link rel="prefetch" href="/blogs/assets/js/205.c81e62f5.js"><link rel="prefetch" href="/blogs/assets/js/206.55e7bb6c.js"><link rel="prefetch" href="/blogs/assets/js/207.4cd290a8.js"><link rel="prefetch" href="/blogs/assets/js/208.23b65267.js"><link rel="prefetch" href="/blogs/assets/js/209.ba939372.js"><link rel="prefetch" href="/blogs/assets/js/21.ece1fdce.js"><link rel="prefetch" href="/blogs/assets/js/210.4de738a7.js"><link rel="prefetch" href="/blogs/assets/js/211.4b462ed7.js"><link rel="prefetch" href="/blogs/assets/js/212.14ec6854.js"><link rel="prefetch" href="/blogs/assets/js/213.e6f24ac6.js"><link rel="prefetch" href="/blogs/assets/js/214.3489ed46.js"><link rel="prefetch" href="/blogs/assets/js/215.bfbf9fb7.js"><link rel="prefetch" href="/blogs/assets/js/216.4c4f8976.js"><link rel="prefetch" href="/blogs/assets/js/217.ebc4029f.js"><link rel="prefetch" href="/blogs/assets/js/218.5e55974b.js"><link rel="prefetch" href="/blogs/assets/js/219.73beef2d.js"><link rel="prefetch" href="/blogs/assets/js/22.b69b7288.js"><link rel="prefetch" href="/blogs/assets/js/220.1094b5c6.js"><link rel="prefetch" href="/blogs/assets/js/221.d83bbdbc.js"><link rel="prefetch" href="/blogs/assets/js/222.00644dba.js"><link rel="prefetch" href="/blogs/assets/js/223.31d8fcdf.js"><link rel="prefetch" href="/blogs/assets/js/224.aef72f74.js"><link rel="prefetch" href="/blogs/assets/js/225.1c23f9c7.js"><link rel="prefetch" href="/blogs/assets/js/226.2a24ccd8.js"><link rel="prefetch" href="/blogs/assets/js/227.61b776c4.js"><link rel="prefetch" href="/blogs/assets/js/228.cccd80f8.js"><link rel="prefetch" href="/blogs/assets/js/229.3264b446.js"><link rel="prefetch" href="/blogs/assets/js/23.ff379a76.js"><link rel="prefetch" href="/blogs/assets/js/230.734e70e1.js"><link rel="prefetch" href="/blogs/assets/js/231.387b34d7.js"><link rel="prefetch" href="/blogs/assets/js/232.01029451.js"><link rel="prefetch" href="/blogs/assets/js/233.d970f564.js"><link rel="prefetch" href="/blogs/assets/js/234.9a274128.js"><link rel="prefetch" href="/blogs/assets/js/235.e9655c87.js"><link rel="prefetch" href="/blogs/assets/js/236.dd33b8e8.js"><link rel="prefetch" href="/blogs/assets/js/237.a762a9b9.js"><link rel="prefetch" href="/blogs/assets/js/238.4f341fc8.js"><link rel="prefetch" href="/blogs/assets/js/239.445f4a71.js"><link rel="prefetch" href="/blogs/assets/js/24.d6f90646.js"><link rel="prefetch" href="/blogs/assets/js/240.8b6ca172.js"><link rel="prefetch" href="/blogs/assets/js/241.fc0fbb3a.js"><link rel="prefetch" href="/blogs/assets/js/242.121b560f.js"><link rel="prefetch" href="/blogs/assets/js/243.65bbc30d.js"><link rel="prefetch" href="/blogs/assets/js/244.4e1a4f6f.js"><link rel="prefetch" href="/blogs/assets/js/245.74650efa.js"><link rel="prefetch" href="/blogs/assets/js/246.44410da9.js"><link rel="prefetch" href="/blogs/assets/js/247.8b17ab29.js"><link rel="prefetch" href="/blogs/assets/js/248.bfd3427b.js"><link rel="prefetch" href="/blogs/assets/js/249.657d85b5.js"><link rel="prefetch" href="/blogs/assets/js/25.33d1b037.js"><link rel="prefetch" href="/blogs/assets/js/250.85d9364b.js"><link rel="prefetch" href="/blogs/assets/js/251.3a2731a1.js"><link rel="prefetch" href="/blogs/assets/js/252.614dddaa.js"><link rel="prefetch" href="/blogs/assets/js/253.e9644a72.js"><link rel="prefetch" href="/blogs/assets/js/254.91d89e86.js"><link rel="prefetch" href="/blogs/assets/js/255.3e45efd3.js"><link rel="prefetch" href="/blogs/assets/js/256.e3855631.js"><link rel="prefetch" href="/blogs/assets/js/257.c99ba8b4.js"><link rel="prefetch" href="/blogs/assets/js/258.d8b477e4.js"><link rel="prefetch" href="/blogs/assets/js/259.2ceb56a0.js"><link rel="prefetch" href="/blogs/assets/js/26.640d9a68.js"><link rel="prefetch" href="/blogs/assets/js/260.b4d81456.js"><link rel="prefetch" href="/blogs/assets/js/261.5f97ec93.js"><link rel="prefetch" href="/blogs/assets/js/262.65521c65.js"><link rel="prefetch" href="/blogs/assets/js/263.0b120aee.js"><link rel="prefetch" href="/blogs/assets/js/264.cb6dba1b.js"><link rel="prefetch" href="/blogs/assets/js/265.7a6b03f8.js"><link rel="prefetch" href="/blogs/assets/js/266.b5c6fa8d.js"><link rel="prefetch" href="/blogs/assets/js/267.be1a936e.js"><link rel="prefetch" href="/blogs/assets/js/268.1e24e2cc.js"><link rel="prefetch" href="/blogs/assets/js/269.0816f7a1.js"><link rel="prefetch" href="/blogs/assets/js/27.de6079ae.js"><link rel="prefetch" href="/blogs/assets/js/270.5d863231.js"><link rel="prefetch" href="/blogs/assets/js/271.6bf6c906.js"><link rel="prefetch" href="/blogs/assets/js/272.487d4e56.js"><link rel="prefetch" href="/blogs/assets/js/273.e851831e.js"><link rel="prefetch" href="/blogs/assets/js/274.ddfce773.js"><link rel="prefetch" href="/blogs/assets/js/275.7be6ccd7.js"><link rel="prefetch" href="/blogs/assets/js/276.e114860f.js"><link rel="prefetch" href="/blogs/assets/js/277.d426622a.js"><link rel="prefetch" href="/blogs/assets/js/278.065ed690.js"><link rel="prefetch" href="/blogs/assets/js/279.a97eb279.js"><link rel="prefetch" href="/blogs/assets/js/28.81d3531c.js"><link rel="prefetch" href="/blogs/assets/js/280.afca3fe3.js"><link rel="prefetch" href="/blogs/assets/js/281.e8afc801.js"><link rel="prefetch" href="/blogs/assets/js/282.6b369e76.js"><link rel="prefetch" href="/blogs/assets/js/283.b4e68cf0.js"><link rel="prefetch" href="/blogs/assets/js/284.4cc56fa2.js"><link rel="prefetch" href="/blogs/assets/js/285.37f3a771.js"><link rel="prefetch" href="/blogs/assets/js/286.eb75f6fc.js"><link rel="prefetch" href="/blogs/assets/js/287.5044aae8.js"><link rel="prefetch" href="/blogs/assets/js/288.3d6057f4.js"><link rel="prefetch" href="/blogs/assets/js/289.49f89a04.js"><link rel="prefetch" href="/blogs/assets/js/29.7978b908.js"><link rel="prefetch" href="/blogs/assets/js/290.3a24c2c7.js"><link rel="prefetch" href="/blogs/assets/js/291.a7a9f8d2.js"><link rel="prefetch" href="/blogs/assets/js/292.e6641495.js"><link rel="prefetch" href="/blogs/assets/js/293.69637ebc.js"><link rel="prefetch" href="/blogs/assets/js/294.34446dd9.js"><link rel="prefetch" href="/blogs/assets/js/295.e697cc4f.js"><link rel="prefetch" href="/blogs/assets/js/296.3a5217af.js"><link rel="prefetch" href="/blogs/assets/js/297.89f3f217.js"><link rel="prefetch" href="/blogs/assets/js/298.7d1e4493.js"><link rel="prefetch" href="/blogs/assets/js/299.dced7d34.js"><link rel="prefetch" href="/blogs/assets/js/3.469820f3.js"><link rel="prefetch" href="/blogs/assets/js/30.a3caea8a.js"><link rel="prefetch" href="/blogs/assets/js/300.c089a9a0.js"><link rel="prefetch" href="/blogs/assets/js/301.0a5a4fb3.js"><link rel="prefetch" href="/blogs/assets/js/302.24f71a08.js"><link rel="prefetch" href="/blogs/assets/js/303.e353ec2a.js"><link rel="prefetch" href="/blogs/assets/js/304.80727d70.js"><link rel="prefetch" href="/blogs/assets/js/305.5a5bc564.js"><link rel="prefetch" href="/blogs/assets/js/306.e7f9c236.js"><link rel="prefetch" href="/blogs/assets/js/307.08effa0e.js"><link rel="prefetch" href="/blogs/assets/js/308.4112802b.js"><link rel="prefetch" href="/blogs/assets/js/309.9571f2ca.js"><link rel="prefetch" href="/blogs/assets/js/31.5710f44b.js"><link rel="prefetch" href="/blogs/assets/js/310.5d368a48.js"><link rel="prefetch" href="/blogs/assets/js/311.16c11adf.js"><link rel="prefetch" href="/blogs/assets/js/312.db502820.js"><link rel="prefetch" href="/blogs/assets/js/313.325b6dba.js"><link rel="prefetch" href="/blogs/assets/js/314.16ea2951.js"><link rel="prefetch" href="/blogs/assets/js/315.6bb51af6.js"><link rel="prefetch" href="/blogs/assets/js/316.48dbfc7f.js"><link rel="prefetch" href="/blogs/assets/js/317.196398a0.js"><link rel="prefetch" href="/blogs/assets/js/318.4e8695f4.js"><link rel="prefetch" href="/blogs/assets/js/319.d5b8f8df.js"><link rel="prefetch" href="/blogs/assets/js/32.e12ad4a6.js"><link rel="prefetch" href="/blogs/assets/js/320.dbd4d64d.js"><link rel="prefetch" href="/blogs/assets/js/321.929a6292.js"><link rel="prefetch" href="/blogs/assets/js/322.0e3a130d.js"><link rel="prefetch" href="/blogs/assets/js/323.7d8c6df6.js"><link rel="prefetch" href="/blogs/assets/js/324.755c1e37.js"><link rel="prefetch" href="/blogs/assets/js/325.16d3b2aa.js"><link rel="prefetch" href="/blogs/assets/js/326.f9ea6d63.js"><link rel="prefetch" href="/blogs/assets/js/327.7aea27e4.js"><link rel="prefetch" href="/blogs/assets/js/328.4eea35b9.js"><link rel="prefetch" href="/blogs/assets/js/329.4f5ea131.js"><link rel="prefetch" href="/blogs/assets/js/33.15722ed9.js"><link rel="prefetch" href="/blogs/assets/js/330.5e79eb19.js"><link rel="prefetch" href="/blogs/assets/js/331.c73daf72.js"><link rel="prefetch" href="/blogs/assets/js/332.bf5b7eb2.js"><link rel="prefetch" href="/blogs/assets/js/333.bf517f24.js"><link rel="prefetch" href="/blogs/assets/js/334.2e504c7c.js"><link rel="prefetch" href="/blogs/assets/js/335.bbbe2c4d.js"><link rel="prefetch" href="/blogs/assets/js/336.4a98dd79.js"><link rel="prefetch" href="/blogs/assets/js/337.56b27c83.js"><link rel="prefetch" href="/blogs/assets/js/338.eeade5e8.js"><link rel="prefetch" href="/blogs/assets/js/339.057e28f8.js"><link rel="prefetch" href="/blogs/assets/js/34.eddf6f94.js"><link rel="prefetch" href="/blogs/assets/js/340.70ca722d.js"><link rel="prefetch" href="/blogs/assets/js/341.b83e3fc8.js"><link rel="prefetch" href="/blogs/assets/js/342.2276b167.js"><link rel="prefetch" href="/blogs/assets/js/343.ac09dccd.js"><link rel="prefetch" href="/blogs/assets/js/344.c80097fd.js"><link rel="prefetch" href="/blogs/assets/js/345.bb280ed6.js"><link rel="prefetch" href="/blogs/assets/js/346.5c1c9c8f.js"><link rel="prefetch" href="/blogs/assets/js/347.45f9adf8.js"><link rel="prefetch" href="/blogs/assets/js/348.55fa575c.js"><link rel="prefetch" href="/blogs/assets/js/349.14492112.js"><link rel="prefetch" href="/blogs/assets/js/35.2656429e.js"><link rel="prefetch" href="/blogs/assets/js/350.23760a3c.js"><link rel="prefetch" href="/blogs/assets/js/351.fbfa99b4.js"><link rel="prefetch" href="/blogs/assets/js/352.dd698868.js"><link rel="prefetch" href="/blogs/assets/js/353.40498626.js"><link rel="prefetch" href="/blogs/assets/js/354.588086f5.js"><link rel="prefetch" href="/blogs/assets/js/355.102fac11.js"><link rel="prefetch" href="/blogs/assets/js/356.cd1267bd.js"><link rel="prefetch" href="/blogs/assets/js/357.c65755fd.js"><link rel="prefetch" href="/blogs/assets/js/358.d415f76c.js"><link rel="prefetch" href="/blogs/assets/js/359.4530dbb7.js"><link rel="prefetch" href="/blogs/assets/js/36.07c0ff21.js"><link rel="prefetch" href="/blogs/assets/js/360.3f0f4e4c.js"><link rel="prefetch" href="/blogs/assets/js/361.850e34f5.js"><link rel="prefetch" href="/blogs/assets/js/362.a71e4238.js"><link rel="prefetch" href="/blogs/assets/js/363.f945f5ef.js"><link rel="prefetch" href="/blogs/assets/js/364.24e0c503.js"><link rel="prefetch" href="/blogs/assets/js/365.8312d12f.js"><link rel="prefetch" href="/blogs/assets/js/366.8d79aadc.js"><link rel="prefetch" href="/blogs/assets/js/367.80c580c9.js"><link rel="prefetch" href="/blogs/assets/js/368.767e89bb.js"><link rel="prefetch" href="/blogs/assets/js/369.455ee011.js"><link rel="prefetch" href="/blogs/assets/js/37.4a723830.js"><link rel="prefetch" href="/blogs/assets/js/370.77548a4b.js"><link rel="prefetch" href="/blogs/assets/js/371.fac90e21.js"><link rel="prefetch" href="/blogs/assets/js/372.5515dc63.js"><link rel="prefetch" href="/blogs/assets/js/373.50bec8c3.js"><link rel="prefetch" href="/blogs/assets/js/374.80fc0c40.js"><link rel="prefetch" href="/blogs/assets/js/375.5a1b8b5f.js"><link rel="prefetch" href="/blogs/assets/js/376.5f3782de.js"><link rel="prefetch" href="/blogs/assets/js/377.db20fdd4.js"><link rel="prefetch" href="/blogs/assets/js/378.c72b100b.js"><link rel="prefetch" href="/blogs/assets/js/379.d0c8d617.js"><link rel="prefetch" href="/blogs/assets/js/38.aa07c55d.js"><link rel="prefetch" href="/blogs/assets/js/380.7865f96f.js"><link rel="prefetch" href="/blogs/assets/js/381.6d80df08.js"><link rel="prefetch" href="/blogs/assets/js/382.054ff8d8.js"><link rel="prefetch" href="/blogs/assets/js/383.e4c6c136.js"><link rel="prefetch" href="/blogs/assets/js/384.301ca1c7.js"><link rel="prefetch" href="/blogs/assets/js/385.5511cf33.js"><link rel="prefetch" href="/blogs/assets/js/386.f9aa0fd5.js"><link rel="prefetch" href="/blogs/assets/js/387.5ae2eb60.js"><link rel="prefetch" href="/blogs/assets/js/388.1ecd0b93.js"><link rel="prefetch" href="/blogs/assets/js/389.e1585690.js"><link rel="prefetch" href="/blogs/assets/js/39.9d36a74f.js"><link rel="prefetch" href="/blogs/assets/js/390.2f1399c7.js"><link rel="prefetch" href="/blogs/assets/js/391.9b8b3ed6.js"><link rel="prefetch" href="/blogs/assets/js/392.0df64944.js"><link rel="prefetch" href="/blogs/assets/js/393.cd07056c.js"><link rel="prefetch" href="/blogs/assets/js/394.bfa9a9ff.js"><link rel="prefetch" href="/blogs/assets/js/395.0e837c6d.js"><link rel="prefetch" href="/blogs/assets/js/396.d0a581b4.js"><link rel="prefetch" href="/blogs/assets/js/397.da4377df.js"><link rel="prefetch" href="/blogs/assets/js/398.f71450a4.js"><link rel="prefetch" href="/blogs/assets/js/399.6284f2b9.js"><link rel="prefetch" href="/blogs/assets/js/4.b2084d38.js"><link rel="prefetch" href="/blogs/assets/js/40.2d10dee1.js"><link rel="prefetch" href="/blogs/assets/js/400.7040a50a.js"><link rel="prefetch" href="/blogs/assets/js/401.8bc0c0aa.js"><link rel="prefetch" href="/blogs/assets/js/402.013b720f.js"><link rel="prefetch" href="/blogs/assets/js/403.3e52abc2.js"><link rel="prefetch" href="/blogs/assets/js/404.d2cdd1ce.js"><link rel="prefetch" href="/blogs/assets/js/405.3e67b68c.js"><link rel="prefetch" href="/blogs/assets/js/406.79927ef5.js"><link rel="prefetch" href="/blogs/assets/js/407.b5ed71a7.js"><link rel="prefetch" href="/blogs/assets/js/408.145aa8f7.js"><link rel="prefetch" href="/blogs/assets/js/409.32610efe.js"><link rel="prefetch" href="/blogs/assets/js/41.21271d6a.js"><link rel="prefetch" href="/blogs/assets/js/410.4249dc3d.js"><link rel="prefetch" href="/blogs/assets/js/411.b31aa37d.js"><link rel="prefetch" href="/blogs/assets/js/412.03523ce7.js"><link rel="prefetch" href="/blogs/assets/js/413.e78807aa.js"><link rel="prefetch" href="/blogs/assets/js/414.a4a7aa8c.js"><link rel="prefetch" href="/blogs/assets/js/415.dfc662a7.js"><link rel="prefetch" href="/blogs/assets/js/416.d9ff6f56.js"><link rel="prefetch" href="/blogs/assets/js/417.c886ca90.js"><link rel="prefetch" href="/blogs/assets/js/418.58dbf064.js"><link rel="prefetch" href="/blogs/assets/js/419.21fbbd8f.js"><link rel="prefetch" href="/blogs/assets/js/42.2b169b47.js"><link rel="prefetch" href="/blogs/assets/js/420.692a166b.js"><link rel="prefetch" href="/blogs/assets/js/421.74f7624e.js"><link rel="prefetch" href="/blogs/assets/js/422.24b03dd4.js"><link rel="prefetch" href="/blogs/assets/js/423.84177236.js"><link rel="prefetch" href="/blogs/assets/js/424.a16c8c1f.js"><link rel="prefetch" href="/blogs/assets/js/425.e4790f48.js"><link rel="prefetch" href="/blogs/assets/js/426.76fb11ff.js"><link rel="prefetch" href="/blogs/assets/js/427.79f0988f.js"><link rel="prefetch" href="/blogs/assets/js/428.a7339a41.js"><link rel="prefetch" href="/blogs/assets/js/429.de6e129f.js"><link rel="prefetch" href="/blogs/assets/js/43.c565f1af.js"><link rel="prefetch" href="/blogs/assets/js/430.7fea3f78.js"><link rel="prefetch" href="/blogs/assets/js/431.dcc6f607.js"><link rel="prefetch" href="/blogs/assets/js/432.212162e9.js"><link rel="prefetch" href="/blogs/assets/js/433.f776b91d.js"><link rel="prefetch" href="/blogs/assets/js/434.3b707b56.js"><link rel="prefetch" href="/blogs/assets/js/435.b7aa4aee.js"><link rel="prefetch" href="/blogs/assets/js/436.80d22e5a.js"><link rel="prefetch" href="/blogs/assets/js/437.3053916e.js"><link rel="prefetch" href="/blogs/assets/js/438.35a1eb12.js"><link rel="prefetch" href="/blogs/assets/js/439.e1a159ba.js"><link rel="prefetch" href="/blogs/assets/js/44.162eb5da.js"><link rel="prefetch" href="/blogs/assets/js/440.eed32138.js"><link rel="prefetch" href="/blogs/assets/js/441.eac95432.js"><link rel="prefetch" href="/blogs/assets/js/442.4712abf5.js"><link rel="prefetch" href="/blogs/assets/js/443.4b5aaf02.js"><link rel="prefetch" href="/blogs/assets/js/444.909b694f.js"><link rel="prefetch" href="/blogs/assets/js/445.6a709980.js"><link rel="prefetch" href="/blogs/assets/js/446.e7b5d143.js"><link rel="prefetch" href="/blogs/assets/js/447.c2adf354.js"><link rel="prefetch" href="/blogs/assets/js/448.bc3639d5.js"><link rel="prefetch" href="/blogs/assets/js/449.de0efc63.js"><link rel="prefetch" href="/blogs/assets/js/45.273542f9.js"><link rel="prefetch" href="/blogs/assets/js/450.352c7201.js"><link rel="prefetch" href="/blogs/assets/js/451.548a0e77.js"><link rel="prefetch" href="/blogs/assets/js/452.cefaa4e7.js"><link rel="prefetch" href="/blogs/assets/js/453.699cb6b8.js"><link rel="prefetch" href="/blogs/assets/js/454.b7f7f39b.js"><link rel="prefetch" href="/blogs/assets/js/455.0aa0d132.js"><link rel="prefetch" href="/blogs/assets/js/456.752f987c.js"><link rel="prefetch" href="/blogs/assets/js/457.f2c21cb0.js"><link rel="prefetch" href="/blogs/assets/js/458.0fccfa1a.js"><link rel="prefetch" href="/blogs/assets/js/459.2b77e495.js"><link rel="prefetch" href="/blogs/assets/js/46.936a08c3.js"><link rel="prefetch" href="/blogs/assets/js/460.cc655724.js"><link rel="prefetch" href="/blogs/assets/js/461.5c9c96b2.js"><link rel="prefetch" href="/blogs/assets/js/462.12641aca.js"><link rel="prefetch" href="/blogs/assets/js/463.e9e3ea74.js"><link rel="prefetch" href="/blogs/assets/js/464.31126ee5.js"><link rel="prefetch" href="/blogs/assets/js/465.990c468c.js"><link rel="prefetch" href="/blogs/assets/js/466.958f9a54.js"><link rel="prefetch" href="/blogs/assets/js/467.228041f6.js"><link rel="prefetch" href="/blogs/assets/js/468.2fa13ad9.js"><link rel="prefetch" href="/blogs/assets/js/469.74b7d516.js"><link rel="prefetch" href="/blogs/assets/js/47.fc5aaa97.js"><link rel="prefetch" href="/blogs/assets/js/470.9c6ddcde.js"><link rel="prefetch" href="/blogs/assets/js/471.a68eabb2.js"><link rel="prefetch" href="/blogs/assets/js/472.98129924.js"><link rel="prefetch" href="/blogs/assets/js/473.17794672.js"><link rel="prefetch" href="/blogs/assets/js/474.2995095f.js"><link rel="prefetch" href="/blogs/assets/js/475.64f80f36.js"><link rel="prefetch" href="/blogs/assets/js/48.895827c2.js"><link rel="prefetch" href="/blogs/assets/js/49.2cecf465.js"><link rel="prefetch" href="/blogs/assets/js/5.d7bbd3d9.js"><link rel="prefetch" href="/blogs/assets/js/50.2972ddee.js"><link rel="prefetch" href="/blogs/assets/js/51.eab84d6d.js"><link rel="prefetch" href="/blogs/assets/js/52.8a915401.js"><link rel="prefetch" href="/blogs/assets/js/53.8eabe307.js"><link rel="prefetch" href="/blogs/assets/js/54.dd0207a2.js"><link rel="prefetch" href="/blogs/assets/js/55.9071c1f8.js"><link rel="prefetch" href="/blogs/assets/js/56.abf569a1.js"><link rel="prefetch" href="/blogs/assets/js/57.55b7a067.js"><link rel="prefetch" href="/blogs/assets/js/58.41f9b620.js"><link rel="prefetch" href="/blogs/assets/js/59.6ebf6261.js"><link rel="prefetch" href="/blogs/assets/js/6.ee65c1e7.js"><link rel="prefetch" href="/blogs/assets/js/60.869205cc.js"><link rel="prefetch" href="/blogs/assets/js/61.2cb25722.js"><link rel="prefetch" href="/blogs/assets/js/62.07a76d23.js"><link rel="prefetch" href="/blogs/assets/js/63.06b6fdce.js"><link rel="prefetch" href="/blogs/assets/js/64.6d213f4c.js"><link rel="prefetch" href="/blogs/assets/js/65.205a4511.js"><link rel="prefetch" href="/blogs/assets/js/66.aaaffa89.js"><link rel="prefetch" href="/blogs/assets/js/67.1d6a2e56.js"><link rel="prefetch" href="/blogs/assets/js/68.3a3a1937.js"><link rel="prefetch" href="/blogs/assets/js/69.233e765f.js"><link rel="prefetch" href="/blogs/assets/js/7.95c5731c.js"><link rel="prefetch" href="/blogs/assets/js/70.581b4adb.js"><link rel="prefetch" href="/blogs/assets/js/71.c5412492.js"><link rel="prefetch" href="/blogs/assets/js/72.20ef83ef.js"><link rel="prefetch" href="/blogs/assets/js/73.2bb1c525.js"><link rel="prefetch" href="/blogs/assets/js/74.1516c569.js"><link rel="prefetch" href="/blogs/assets/js/75.c3370786.js"><link rel="prefetch" href="/blogs/assets/js/76.80e4fe0c.js"><link rel="prefetch" href="/blogs/assets/js/77.f2c7adac.js"><link rel="prefetch" href="/blogs/assets/js/78.8e806f46.js"><link rel="prefetch" href="/blogs/assets/js/79.18d03739.js"><link rel="prefetch" href="/blogs/assets/js/8.6c8082e2.js"><link rel="prefetch" href="/blogs/assets/js/80.a65a8759.js"><link rel="prefetch" href="/blogs/assets/js/81.d8a5fbe0.js"><link rel="prefetch" href="/blogs/assets/js/82.c642a64d.js"><link rel="prefetch" href="/blogs/assets/js/83.33fa18d7.js"><link rel="prefetch" href="/blogs/assets/js/84.f6edf7b8.js"><link rel="prefetch" href="/blogs/assets/js/85.b2751517.js"><link rel="prefetch" href="/blogs/assets/js/86.3c361927.js"><link rel="prefetch" href="/blogs/assets/js/87.1af5df70.js"><link rel="prefetch" href="/blogs/assets/js/88.ec0bd5de.js"><link rel="prefetch" href="/blogs/assets/js/89.aa8e0f1e.js"><link rel="prefetch" href="/blogs/assets/js/9.b33bc7c6.js"><link rel="prefetch" href="/blogs/assets/js/90.dba5a8d2.js"><link rel="prefetch" href="/blogs/assets/js/91.fb84fe0a.js"><link rel="prefetch" href="/blogs/assets/js/92.92e6527e.js"><link rel="prefetch" href="/blogs/assets/js/93.a9cede4e.js"><link rel="prefetch" href="/blogs/assets/js/94.e2e01b5e.js"><link rel="prefetch" href="/blogs/assets/js/95.5ca324a4.js"><link rel="prefetch" href="/blogs/assets/js/96.d70070fb.js"><link rel="prefetch" href="/blogs/assets/js/97.84d7ab42.js"><link rel="prefetch" href="/blogs/assets/js/98.a33985b1.js"><link rel="prefetch" href="/blogs/assets/js/99.bbe78d52.js">
+    <link rel="stylesheet" href="/blogs/assets/css/0.styles.7a0dfb7e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-f848d4e8><div class="global-loading-wrapper" data-v-3a334c6d data-v-f848d4e8 data-v-f848d4e8><div class="loader-main" data-v-3a334c6d><img src="/blogs/assets/img/loading.a592e2e5.jpg" alt="loading" data-v-3a334c6d></div></div> <div class="hide" data-v-f848d4e8><header class="navbar" data-v-f848d4e8><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blogs/" class="home-link router-link-active"><img src="/blogs/img/kmc.jpg" alt="卡夫卡的岛上书店" class="logo"> <span class="site-name">卡夫卡的岛上书店</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">选择模式</h4> <ul class="color-mode-options"><li class="dark">深色模式</li><li class="light active">浅色模式</li><li class="read">阅读模式</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <ul class="suggestions" style="display:none;"></ul></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blogs/" class="nav-link"><i class="iconfont reco-home"></i>首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><a href="/blogs/web/" class="nav-link router-link-active"><i></i>前端
+      </a></span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>文档教程</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/web/docs/imooc/wiki/" class="nav-link"><i class="iconfont reco-blog"></i>慕课教程
+</a></li><li class="dropdown-subitem"><a href="/blogs/web/docs/es6/" class="nav-link"><i class="iconfont reco-blog"></i>ES6 入门教程
+</a></li><li class="dropdown-subitem"><a href="/blogs/web/docs/wangdoc/javascript/" class="nav-link"><i class="iconfont reco-blog"></i>网道-JavaScript 教程
+</a></li><li class="dropdown-subitem"><a href="/blogs/web/docs/angular/" class="nav-link"><i class="iconfont reco-blog"></i>Angular 文档
+</a></li><li class="dropdown-subitem"><a href="/blogs/web/docs/react/" class="nav-link"><i class="iconfont reco-blog"></i>React 文档
+</a></li><li class="dropdown-subitem"><a href="/blogs/web/docs/vue/" class="nav-link"><i class="iconfont reco-blog"></i>Vue 文档
+</a></li><li class="dropdown-subitem"><a href="/blogs/web/docs/node/" class="nav-link"><i class="iconfont reco-blog"></i>Node 文档
+</a></li><li class="dropdown-subitem"><a href="/blogs/web/docs/babel/" class="nav-link"><i class="iconfont reco-blog"></i>Babel 文档
+</a></li><li class="dropdown-subitem"><a href="/blogs/web/docs/webpack/" class="nav-link"><i class="iconfont reco-blog"></i>Webpack 文档
+</a></li><li class="dropdown-subitem"><a href="/blogs/web/docs/typescript/" class="nav-link"><i class="iconfont reco-blog"></i>TypeScript 文档
+</a></li><li class="dropdown-subitem"><a href="/blogs/web/docs/runoob/" class="nav-link"><i class="iconfont reco-blog"></i>菜鸟教程
+</a></li><li class="dropdown-subitem"><a href="/blogs/web/docs/docschina/" class="nav-link"><i class="iconfont reco-blog"></i>印记中文
+</a></li></ul></li><li class="dropdown-item"><h4>专栏笔记</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/column-notes/33-js/" class="nav-link"><i class="iconfont reco-blog"></i>JavaScript的33个概念
+</a></li><li class="dropdown-subitem"><a href="/blogs/column-notes/relearn-frontend/" class="nav-link"><i class="iconfont reco-blog"></i>重学前端
+</a></li><li class="dropdown-subitem"><a href="/blogs/column-notes/http-protocol/" class="nav-link"><i class="iconfont reco-blog"></i>透视HTTP协议
+</a></li><li class="dropdown-subitem"><a href="/blogs/column-notes/play-webpack/" class="nav-link"><i class="iconfont reco-blog"></i>玩转webpack
+</a></li><li class="dropdown-subitem"><a href="/blogs/column-notes/browser-principle/" class="nav-link"><i class="iconfont reco-blog"></i>浏览器工作原理与实践
+</a></li></ul></li><li class="dropdown-item"><h4>书籍笔记</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/book-notes/donot-know-javascript/" class="nav-link"><i class="iconfont reco-blog"></i>你不知道的JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>推荐博客</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/web/ruanyifeng/" class="nav-link"><i class="iconfont reco-blog"></i>阮一峰的个人网站
+</a></li><li class="dropdown-subitem"><a href="/blogs/web/liaoxuefeng/" class="nav-link"><i class="iconfont reco-blog"></i>廖雪峰的官方网站
+</a></li></ul></li><li class="dropdown-item"><h4>工具</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/web/tools/astexplorer/" class="nav-link"><i class="iconfont reco-blog"></i>AST Explorer
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><a href="/blogs/golang/" class="nav-link"><i></i>Golang
+      </a></span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>文档资源</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/golang/docs/gopl-zh/" class="nav-link"><i class="iconfont reco-blog"></i>Go语言圣经（中文版）
+</a></li><li class="dropdown-subitem"><a href="/blogs/golang/docs/31de972b403fd/" class="nav-link"><i class="iconfont reco-blog"></i>Go 语言学习资料
+</a></li></ul></li><li class="dropdown-item"><h4>书籍笔记</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/golang/book-notes/the-way-to-go/" class="nav-link"><i class="iconfont reco-blog"></i>Go入门指南
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><a href="/blogs/library/" class="nav-link"><i></i>图书馆
+      </a></span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>太易</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/library/map/" class="nav-link"><i class="iconfont reco-blog"></i>时间地图
+</a></li></ul></li><li class="dropdown-item"><h4>太初</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/library/wiki/" class="nav-link"><i class="iconfont reco-blog"></i>中文维基百科
+</a></li></ul></li><li class="dropdown-item"><h4>太始</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/library/wdl/" class="nav-link"><i class="iconfont reco-blog"></i>世界数字图书馆
+</a></li></ul></li><li class="dropdown-item"><h4>太素</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/library/douban/" class="nav-link"><i class="iconfont reco-blog"></i>豆瓣榜单
+</a></li><li class="dropdown-subitem"><a href="/blogs/library/open163/" class="nav-link"><i class="iconfont reco-blog"></i>网易公开课
+</a></li></ul></li><li class="dropdown-item"><h4>太极</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/library/shici/" class="nav-link"><i class="iconfont reco-blog"></i>中华诗词
+</a></li><li class="dropdown-subitem"><a href="/blogs/library/processon/" class="nav-link"><i class="iconfont reco-blog"></i>ProcessOn图形化知识资源
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><a href="/blogs/idealism/" class="nav-link"><i></i>昨日与明日
+      </a></span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>昨日</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/idealism/music/" class="nav-link"><i class="iconfont reco-blog"></i>音乐
+</a></li></ul></li><li class="dropdown-item"><h4>今日</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/idealism/philosophy/" class="nav-link"><i class="iconfont reco-blog"></i>哲学
+</a></li></ul></li><li class="dropdown-item"><h4>明日</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/idealism/kaimo/" class="nav-link"><i class="iconfont reco-blog"></i>忧伤的年轻人
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>索引
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/sitemap/" class="nav-link"><i class="iconfont reco-blog"></i>总目录
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/categories/" class="nav-link"><i class="iconfont reco-category"></i>分类
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/tags/" class="nav-link"><i class="iconfont reco-tag"></i>标签
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/archives/" class="nav-link"><i class="iconfont reco-date"></i>归档
+</a></li></ul></div></div><div class="nav-item"><a href="/blogs/bookshop/message-board/" class="nav-link"><i class="iconfont reco-suggestion"></i>留言板
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>关于
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>联系</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://blog.csdn.net/kaimo313" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-csdn"></i>CSDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://gitee.com/kaimo313" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-mayun"></i>Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://github.com/kaimo313" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="/blogs/bookshop/linkme/" class="nav-link"><i class="iconfont reco-account"></i>联系店长
+</a></li></ul></li><li class="dropdown-item"><h4>博客</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/bookshop/explain/" class="nav-link"><i class="iconfont reco-document"></i>博客说明
+</a></li><li class="dropdown-subitem"><a href="/blogs/bookshop/logs/" class="nav-link"><i class="iconfont reco-document"></i>更新日志
+</a></li></ul></li><li class="dropdown-item"><h4>其他</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/resource-tools/" class="nav-link"><i class="iconfont reco-document"></i>资源工具
+</a></li><li class="dropdown-subitem"><a href="/blogs/bookshop/friendslink/" class="nav-link"><i class="iconfont reco-friend"></i>友情链接
+</a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-f848d4e8></div> <aside class="sidebar" data-v-f848d4e8><div class="personal-info-wrapper" data-v-34faaed8 data-v-f848d4e8><img src="/blogs/img/avatar.jpg" alt="author-avatar" class="personal-img" data-v-34faaed8> <div class="author" data-v-34faaed8>
+    凯小默
+  </div> <div class="personal-info-details" data-v-34faaed8><div data-v-34faaed8>文章：<span data-v-34faaed8>404</span></div> <div data-v-34faaed8>地点：<span data-v-34faaed8>canton</span></div></div> <div class="slogan" data-v-34faaed8>
+    standing on the shoulders of giants
+  </div> <ul class="social-links" data-v-34faaed8><li class="social-item" data-v-34faaed8><i class="iconfont reco-csdn" style="color:#fc5531;" data-v-34faaed8></i></li><li class="social-item" data-v-34faaed8><i class="iconfont reco-mayun" style="color:#c71d24;" data-v-34faaed8></i></li><li class="social-item" data-v-34faaed8><i class="iconfont reco-bilibili" style="color:#fb7299;" data-v-34faaed8></i></li><li class="social-item" data-v-34faaed8><i class="iconfont reco-github" style="color:#3eaf7c;" data-v-34faaed8></i></li><li class="social-item" data-v-34faaed8><i class="iconfont reco-mail" style="color:#00a1d6;" data-v-34faaed8></i></li></ul></div> <nav class="nav-links"><div class="nav-item"><a href="/blogs/" class="nav-link"><i class="iconfont reco-home"></i>首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><a href="/blogs/web/" class="nav-link router-link-active"><i></i>前端
+      </a></span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>文档教程</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/web/docs/imooc/wiki/" class="nav-link"><i class="iconfont reco-blog"></i>慕课教程
+</a></li><li class="dropdown-subitem"><a href="/blogs/web/docs/es6/" class="nav-link"><i class="iconfont reco-blog"></i>ES6 入门教程
+</a></li><li class="dropdown-subitem"><a href="/blogs/web/docs/wangdoc/javascript/" class="nav-link"><i class="iconfont reco-blog"></i>网道-JavaScript 教程
+</a></li><li class="dropdown-subitem"><a href="/blogs/web/docs/angular/" class="nav-link"><i class="iconfont reco-blog"></i>Angular 文档
+</a></li><li class="dropdown-subitem"><a href="/blogs/web/docs/react/" class="nav-link"><i class="iconfont reco-blog"></i>React 文档
+</a></li><li class="dropdown-subitem"><a href="/blogs/web/docs/vue/" class="nav-link"><i class="iconfont reco-blog"></i>Vue 文档
+</a></li><li class="dropdown-subitem"><a href="/blogs/web/docs/node/" class="nav-link"><i class="iconfont reco-blog"></i>Node 文档
+</a></li><li class="dropdown-subitem"><a href="/blogs/web/docs/babel/" class="nav-link"><i class="iconfont reco-blog"></i>Babel 文档
+</a></li><li class="dropdown-subitem"><a href="/blogs/web/docs/webpack/" class="nav-link"><i class="iconfont reco-blog"></i>Webpack 文档
+</a></li><li class="dropdown-subitem"><a href="/blogs/web/docs/typescript/" class="nav-link"><i class="iconfont reco-blog"></i>TypeScript 文档
+</a></li><li class="dropdown-subitem"><a href="/blogs/web/docs/runoob/" class="nav-link"><i class="iconfont reco-blog"></i>菜鸟教程
+</a></li><li class="dropdown-subitem"><a href="/blogs/web/docs/docschina/" class="nav-link"><i class="iconfont reco-blog"></i>印记中文
+</a></li></ul></li><li class="dropdown-item"><h4>专栏笔记</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/column-notes/33-js/" class="nav-link"><i class="iconfont reco-blog"></i>JavaScript的33个概念
+</a></li><li class="dropdown-subitem"><a href="/blogs/column-notes/relearn-frontend/" class="nav-link"><i class="iconfont reco-blog"></i>重学前端
+</a></li><li class="dropdown-subitem"><a href="/blogs/column-notes/http-protocol/" class="nav-link"><i class="iconfont reco-blog"></i>透视HTTP协议
+</a></li><li class="dropdown-subitem"><a href="/blogs/column-notes/play-webpack/" class="nav-link"><i class="iconfont reco-blog"></i>玩转webpack
+</a></li><li class="dropdown-subitem"><a href="/blogs/column-notes/browser-principle/" class="nav-link"><i class="iconfont reco-blog"></i>浏览器工作原理与实践
+</a></li></ul></li><li class="dropdown-item"><h4>书籍笔记</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/book-notes/donot-know-javascript/" class="nav-link"><i class="iconfont reco-blog"></i>你不知道的JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>推荐博客</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/web/ruanyifeng/" class="nav-link"><i class="iconfont reco-blog"></i>阮一峰的个人网站
+</a></li><li class="dropdown-subitem"><a href="/blogs/web/liaoxuefeng/" class="nav-link"><i class="iconfont reco-blog"></i>廖雪峰的官方网站
+</a></li></ul></li><li class="dropdown-item"><h4>工具</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/web/tools/astexplorer/" class="nav-link"><i class="iconfont reco-blog"></i>AST Explorer
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><a href="/blogs/golang/" class="nav-link"><i></i>Golang
+      </a></span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>文档资源</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/golang/docs/gopl-zh/" class="nav-link"><i class="iconfont reco-blog"></i>Go语言圣经（中文版）
+</a></li><li class="dropdown-subitem"><a href="/blogs/golang/docs/31de972b403fd/" class="nav-link"><i class="iconfont reco-blog"></i>Go 语言学习资料
+</a></li></ul></li><li class="dropdown-item"><h4>书籍笔记</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/golang/book-notes/the-way-to-go/" class="nav-link"><i class="iconfont reco-blog"></i>Go入门指南
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><a href="/blogs/library/" class="nav-link"><i></i>图书馆
+      </a></span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>太易</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/library/map/" class="nav-link"><i class="iconfont reco-blog"></i>时间地图
+</a></li></ul></li><li class="dropdown-item"><h4>太初</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/library/wiki/" class="nav-link"><i class="iconfont reco-blog"></i>中文维基百科
+</a></li></ul></li><li class="dropdown-item"><h4>太始</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/library/wdl/" class="nav-link"><i class="iconfont reco-blog"></i>世界数字图书馆
+</a></li></ul></li><li class="dropdown-item"><h4>太素</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/library/douban/" class="nav-link"><i class="iconfont reco-blog"></i>豆瓣榜单
+</a></li><li class="dropdown-subitem"><a href="/blogs/library/open163/" class="nav-link"><i class="iconfont reco-blog"></i>网易公开课
+</a></li></ul></li><li class="dropdown-item"><h4>太极</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/library/shici/" class="nav-link"><i class="iconfont reco-blog"></i>中华诗词
+</a></li><li class="dropdown-subitem"><a href="/blogs/library/processon/" class="nav-link"><i class="iconfont reco-blog"></i>ProcessOn图形化知识资源
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><a href="/blogs/idealism/" class="nav-link"><i></i>昨日与明日
+      </a></span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>昨日</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/idealism/music/" class="nav-link"><i class="iconfont reco-blog"></i>音乐
+</a></li></ul></li><li class="dropdown-item"><h4>今日</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/idealism/philosophy/" class="nav-link"><i class="iconfont reco-blog"></i>哲学
+</a></li></ul></li><li class="dropdown-item"><h4>明日</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/idealism/kaimo/" class="nav-link"><i class="iconfont reco-blog"></i>忧伤的年轻人
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>索引
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/sitemap/" class="nav-link"><i class="iconfont reco-blog"></i>总目录
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/categories/" class="nav-link"><i class="iconfont reco-category"></i>分类
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/tags/" class="nav-link"><i class="iconfont reco-tag"></i>标签
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/archives/" class="nav-link"><i class="iconfont reco-date"></i>归档
+</a></li></ul></div></div><div class="nav-item"><a href="/blogs/bookshop/message-board/" class="nav-link"><i class="iconfont reco-suggestion"></i>留言板
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>关于
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>联系</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://blog.csdn.net/kaimo313" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-csdn"></i>CSDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://gitee.com/kaimo313" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-mayun"></i>Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://github.com/kaimo313" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="/blogs/bookshop/linkme/" class="nav-link"><i class="iconfont reco-account"></i>联系店长
+</a></li></ul></li><li class="dropdown-item"><h4>博客</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/bookshop/explain/" class="nav-link"><i class="iconfont reco-document"></i>博客说明
+</a></li><li class="dropdown-subitem"><a href="/blogs/bookshop/logs/" class="nav-link"><i class="iconfont reco-document"></i>更新日志
+</a></li></ul></li><li class="dropdown-item"><h4>其他</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blogs/resource-tools/" class="nav-link"><i class="iconfont reco-document"></i>资源工具
+</a></li><li class="dropdown-subitem"><a href="/blogs/bookshop/friendslink/" class="nav-link"><i class="iconfont reco-friend"></i>友情链接
+</a></li></ul></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>文档教程</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Html</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Jquery</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vue</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>UI 库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Node</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Git</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>可视化</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>LeetCode</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>推荐博客</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>面试</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>工具插件</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blogs/web/tools/1149b202972f/" class="sidebar-link">使用 markdown-it-emoji 生成 emoji</a></li><li><a href="/blogs/web/tools/b4da796836328/" class="sidebar-link">GitHub超实用的可视化代码树插件：Octotree</a></li><li><a href="/blogs/web/tools/1dc3bdcf7d686/" class="sidebar-link">开源书籍和网站：free-programming-books</a></li><li><a href="/blogs/web/tools/f7bd6aac4bae1/" class="sidebar-link">怎么批量给文件添加拓展名？</a></li><li><a href="/blogs/web/tools/3340540b69596/" class="sidebar-link">Snipaste：简单、强大的截图、取色工具</a></li><li><a href="/blogs/web/tools/c8d300012bce4/" aria-current="page" class="active sidebar-link">the-super-tiny-compiler</a></li><li><a href="/blogs/web/tools/astexplorer/" class="sidebar-link">AST Explorer</a></li></ul></section></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper bg-style-14"><div class="articleInfo-wrap" data-v-13f19dad><div class="articleInfo" data-v-13f19dad><ul class="breadcrumbs" data-v-13f19dad><li data-v-13f19dad><a href="/blogs/" title="首页" class="fa fa-laptop-house router-link-active" data-v-13f19dad></a></li> <li data-v-13f19dad><a href="/blogs/web/" title="前端-目录页" class="router-link-active" data-v-13f19dad>前端</a></li> <li data-v-13f19dad><a href="/blogs/web/#工具插件" title="前端#工具插件" data-v-13f19dad>工具插件</a></li> <!----></ul> <div class="info" data-v-13f19dad><div title="作者" class="author fa fa-user" data-v-13f19dad><a href="javascript:;" data-v-13f19dad>凯小默</a></div> <div title="创建时间" class="date fa fa-calendar-alt" data-v-13f19dad><a href="javascript:;" data-v-13f19dad>2021/03/11 09:34:53</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><!----> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABKFJREFUSA3tVl1oFVcQnrMbrak3QUgkya1akpJYcrUtIqW1JvFBE9LiQ5v6JmJpolbMg32rVrhgoYK0QiMY6i9Y6EMaW5D+xFJaTYItIuK2Kr3+BJNwkxBj05sQY3b3nM6cs2dv9t7NT/vQJw/sndk5M/PNzJkzewGerP+pAmy+ON8lLzUJgA8ZYxYIYZmGYRnctDaWvJJAmTtfP1pvXsBCCPP8QFcCaRkZYACgDZFO4stNIcBCajEOlmmC9XpJ9bAGCaPaPmzPl32dvLSVu3BWCTQs0XQQ6g0DYgwLIoAZbBCdW/i+781o1VVlm/410mw4h06Y7bIPHNyWDyL4FHkX03Q8SrzNhZTZriieckWt7cL6MM85YcLpsi/7O9/iXFT6MswI0DmmpkSaJ0qLxFIm3+i1THHB3zmBH3PYx9CcykcLOeQVVa7QtdxTgQgEleX2AjHYfwA+2ddV77ruGoJUbhGDI09YSNXyMpUt5ylOzxgbUmtOp7NmbNt8v3arjTBfYELmLUV+M+nSawNNAUqpT3ClJWg5I3BLT+cGW/DXNGCa6tx1aakCGEigArTn4TDIPdrXXYKCZNrHLMCOEPvHBlLQ99s9eHB7EB6NTki73CVPQ2F5MSx/uRQixfmq7rK0wYD8w8E905bnPDfwoWs/rfv93NWN/ZfvwsLIU7A09gxECyISeGJkHAau98L97tuw7NXnoPyNF8FcYGLGKsOs0mN3OEyec9esGW/ZEl945dTP34wlR2FZVQWU1q0Cw8Tr7p+hgLLNL0FPxx/Q35mA8aEUrH6nCgwEl0tn7wUiZYJnNRh6DK4UH/k0lfyrsBKdPVv/AriGIQcEDQZ65LBAGe2Rzui9Ybjz7XUppz1/uKBbyVPGkN3ZAeC6hr0x7Nr38N5+EqkoOm17xpoqR9ohQF55ERSvr4Dkr3chNfC3DMzGJlNBElW8w9nsGQvhNGIzDkXzCg8cLK951xHsFBlTJspJNi3ZFIMF2AeDV3q8DNOB+YHi6QTrChDIWDBRi5U5f+ZMfJLu3ccrqxtdxk4SKH336LFxSmkqefwU5T8fhdSdQf9IVKD6aNiwI/hnmcAZ91isYMJIaCUCx9W098+LgruikeTqzqqxKPUwqJyCPJiyemVVZBOijDGjD38Os0jOiSPL1z3SPjXNANbiNPXAdzTfukjjuknNBbyz3nwgTd3AVFqUJ5hpHlq9MveLnWwttUfoygBmvVjuikxND3znrhsELnZk7k+OjIGxeNEkomyLVta0xxn+HZhjBc4YZ/AFjHjz9u3xRZl2BN4aq9nFwWh16IrQ1aHHEd3j1+4/dB9OtH4e29A2H1DyHQRmOSfQZ1Fy7MHBTGB6J/Djq6p3OxyO2cB+4Car7v/o3GXgfAkj23+x9ID1Teoamo/SXcbvSf2PX7Vc8DdCmE1vN9di+32P9/5YR3vLnhCVGUWBjEkr3yh4H8v9CzmsbdhzOKzsJKM90iFdaTMjRPhGVsakRvOaRidljo6H6G7j+ctrJpsP+4COhDIl0La2+FS4+5mlocBaXY5QnGZysIBYoeSsl5qQzrSj/cgNrfuEzlWBfwA+EjrZyWUvpAAAAABJRU5ErkJggg==">
+            the-super-tiny-compiler
+          </h1> <div class="theme-vdoing-content content__default"><p><strong>词法分析</strong>，也叫做扫描scanner。它读取我们的代码，然后把它们按照预定的规则合并成一个个的标识tokens。同时，它会移除空白符，注释，等。最后，整个代码将被分割进一个tokens列表（或者说一维数组）。</p> <p><strong>语法分析</strong>，也解析器。它会将词法分析出来的数组转化成树形的表达形式。同时，验证语法，语法如果有错的话，抛出语法错误。</p> <p><a href="https://github.com/jamiebuilds/the-super-tiny-compiler" target="_blank" rel="noopener noreferrer">the-super-tiny-compiler<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><code>This is an ultra-simplified example of all the major pieces of a modern compiler written in easy to read JavaScript.Reading through the guided code will help you learn about how most compilers work from end to end.</code></p> <blockquote><p>这是用易于阅读的 <code>JavaScript</code> 编写的现代编译器所有主要部分的极简示例。通读指导性代码将帮助您了解大多数编译器如何从头到尾工作。</p></blockquote> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token string">'use strict'</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * TTTTTTTTTTTTTTTTTTTTTTTHHHHHHHHH     HHHHHHHHHEEEEEEEEEEEEEEEEEEEEEE
+ * T:::::::::::::::::::::TH:::::::H     H:::::::HE::::::::::::::::::::E
+ * T:::::::::::::::::::::TH:::::::H     H:::::::HE::::::::::::::::::::E
+ * T:::::TT:::::::TT:::::THH::::::H     H::::::HHEE::::::EEEEEEEEE::::E
+ * TTTTTT  T:::::T  TTTTTT  H:::::H     H:::::H    E:::::E       EEEEEE
+ *         T:::::T          H:::::H     H:::::H    E:::::E
+ *         T:::::T          H::::::HHHHH::::::H    E::::::EEEEEEEEEE
+ *         T:::::T          H:::::::::::::::::H    E:::::::::::::::E
+ *         T:::::T          H:::::::::::::::::H    E:::::::::::::::E
+ *         T:::::T          H::::::HHHHH::::::H    E::::::EEEEEEEEEE
+ *         T:::::T          H:::::H     H:::::H    E:::::E
+ *         T:::::T          H:::::H     H:::::H    E:::::E       EEEEEE
+ *       TT:::::::TT      HH::::::H     H::::::HHEE::::::EEEEEEEE:::::E
+ *       T:::::::::T      H:::::::H     H:::::::HE::::::::::::::::::::E
+ *       T:::::::::T      H:::::::H     H:::::::HE::::::::::::::::::::E
+ *       TTTTTTTTTTT      HHHHHHHHH     HHHHHHHHHEEEEEEEEEEEEEEEEEEEEEE
+ *
+ *    SSSSSSSSSSSSSSS UUUUUUUU     UUUUUUUUPPPPPPPPPPPPPPPPP   EEEEEEEEEEEEEEEEEEEEEERRRRRRRRRRRRRRRRR
+ *  SS:::::::::::::::SU::::::U     U::::::UP::::::::::::::::P  E::::::::::::::::::::ER::::::::::::::::R
+ * S:::::SSSSSS::::::SU::::::U     U::::::UP::::::PPPPPP:::::P E::::::::::::::::::::ER::::::RRRRRR:::::R
+ * S:::::S     SSSSSSSUU:::::U     U:::::UUPP:::::P     P:::::PEE::::::EEEEEEEEE::::ERR:::::R     R:::::R
+ * S:::::S             U:::::U     U:::::U   P::::P     P:::::P  E:::::E       EEEEEE  R::::R     R:::::R
+ * S:::::S             U:::::U     U:::::U   P::::P     P:::::P  E:::::E               R::::R     R:::::R
+ *  S::::SSSS          U:::::U     U:::::U   P::::PPPPPP:::::P   E::::::EEEEEEEEEE     R::::RRRRRR:::::R
+ *   SS::::::SSSSS     U:::::U     U:::::U   P:::::::::::::PP    E:::::::::::::::E     R:::::::::::::RR
+ *     SSS::::::::SS   U:::::U     U:::::U   P::::PPPPPPPPP      E:::::::::::::::E     R::::RRRRRR:::::R
+ *        SSSSSS::::S  U:::::U     U:::::U   P::::P              E::::::EEEEEEEEEE     R::::R     R:::::R
+ *             S:::::S U:::::U     U:::::U   P::::P              E:::::E               R::::R     R:::::R
+ *             S:::::S U::::::U   U::::::U   P::::P              E:::::E       EEEEEE  R::::R     R:::::R
+ * SSSSSSS     S:::::S U:::::::UUU:::::::U PP::::::PP          EE::::::EEEEEEEE:::::ERR:::::R     R:::::R
+ * S::::::SSSSSS:::::S  UU:::::::::::::UU  P::::::::P          E::::::::::::::::::::ER::::::R     R:::::R
+ * S:::::::::::::::SS     UU:::::::::UU    P::::::::P          E::::::::::::::::::::ER::::::R     R:::::R
+ *  SSSSSSSSSSSSSSS         UUUUUUUUU      PPPPPPPPPP          EEEEEEEEEEEEEEEEEEEEEERRRRRRRR     RRRRRRR
+ *
+ * TTTTTTTTTTTTTTTTTTTTTTTIIIIIIIIIINNNNNNNN        NNNNNNNNYYYYYYY       YYYYYYY
+ * T:::::::::::::::::::::TI::::::::IN:::::::N       N::::::NY:::::Y       Y:::::Y
+ * T:::::::::::::::::::::TI::::::::IN::::::::N      N::::::NY:::::Y       Y:::::Y
+ * T:::::TT:::::::TT:::::TII::::::IIN:::::::::N     N::::::NY::::::Y     Y::::::Y
+ * TTTTTT  T:::::T  TTTTTT  I::::I  N::::::::::N    N::::::NYYY:::::Y   Y:::::YYY
+ *         T:::::T          I::::I  N:::::::::::N   N::::::N   Y:::::Y Y:::::Y
+ *         T:::::T          I::::I  N:::::::N::::N  N::::::N    Y:::::Y:::::Y
+ *         T:::::T          I::::I  N::::::N N::::N N::::::N     Y:::::::::Y
+ *         T:::::T          I::::I  N::::::N  N::::N:::::::N      Y:::::::Y
+ *         T:::::T          I::::I  N::::::N   N:::::::::::N       Y:::::Y
+ *         T:::::T          I::::I  N::::::N    N::::::::::N       Y:::::Y
+ *         T:::::T          I::::I  N::::::N     N:::::::::N       Y:::::Y
+ *       TT:::::::TT      II::::::IIN::::::N      N::::::::N       Y:::::Y
+ *       T:::::::::T      I::::::::IN::::::N       N:::::::N    YYYY:::::YYYY
+ *       T:::::::::T      I::::::::IN::::::N        N::::::N    Y:::::::::::Y
+ *       TTTTTTTTTTT      IIIIIIIIIINNNNNNNN         NNNNNNN    YYYYYYYYYYYYY
+ *
+ *         CCCCCCCCCCCCC     OOOOOOOOO     MMMMMMMM               MMMMMMMMPPPPPPPPPPPPPPPPP   IIIIIIIIIILLLLLLLLLLL             EEEEEEEEEEEEEEEEEEEEEERRRRRRRRRRRRRRRRR
+ *      CCC::::::::::::C   OO:::::::::OO   M:::::::M             M:::::::MP::::::::::::::::P  I::::::::IL:::::::::L             E::::::::::::::::::::ER::::::::::::::::R
+ *    CC:::::::::::::::C OO:::::::::::::OO M::::::::M           M::::::::MP::::::PPPPPP:::::P I::::::::IL:::::::::L             E::::::::::::::::::::ER::::::RRRRRR:::::R
+ *   C:::::CCCCCCCC::::CO:::::::OOO:::::::OM:::::::::M         M:::::::::MPP:::::P     P:::::PII::::::IILL:::::::LL             EE::::::EEEEEEEEE::::ERR:::::R     R:::::R
+ *  C:::::C       CCCCCCO::::::O   O::::::OM::::::::::M       M::::::::::M  P::::P     P:::::P  I::::I    L:::::L                 E:::::E       EEEEEE  R::::R     R:::::R
+ * C:::::C              O:::::O     O:::::OM:::::::::::M     M:::::::::::M  P::::P     P:::::P  I::::I    L:::::L                 E:::::E               R::::R     R:::::R
+ * C:::::C              O:::::O     O:::::OM:::::::M::::M   M::::M:::::::M  P::::PPPPPP:::::P   I::::I    L:::::L                 E::::::EEEEEEEEEE     R::::RRRRRR:::::R
+ * C:::::C              O:::::O     O:::::OM::::::M M::::M M::::M M::::::M  P:::::::::::::PP    I::::I    L:::::L                 E:::::::::::::::E     R:::::::::::::RR
+ * C:::::C              O:::::O     O:::::OM::::::M  M::::M::::M  M::::::M  P::::PPPPPPPPP      I::::I    L:::::L                 E:::::::::::::::E     R::::RRRRRR:::::R
+ * C:::::C              O:::::O     O:::::OM::::::M   M:::::::M   M::::::M  P::::P              I::::I    L:::::L                 E::::::EEEEEEEEEE     R::::R     R:::::R
+ * C:::::C              O:::::O     O:::::OM::::::M    M:::::M    M::::::M  P::::P              I::::I    L:::::L                 E:::::E               R::::R     R:::::R
+ *  C:::::C       CCCCCCO::::::O   O::::::OM::::::M     MMMMM     M::::::M  P::::P              I::::I    L:::::L         LLLLLL  E:::::E       EEEEEE  R::::R     R:::::R
+ *   C:::::CCCCCCCC::::CO:::::::OOO:::::::OM::::::M               M::::::MPP::::::PP          II::::::IILL:::::::LLLLLLLLL:::::LEE::::::EEEEEEEE:::::ERR:::::R     R:::::R
+ *    CC:::::::::::::::C OO:::::::::::::OO M::::::M               M::::::MP::::::::P          I::::::::IL::::::::::::::::::::::LE::::::::::::::::::::ER::::::R     R:::::R
+ *      CCC::::::::::::C   OO:::::::::OO   M::::::M               M::::::MP::::::::P          I::::::::IL::::::::::::::::::::::LE::::::::::::::::::::ER::::::R     R:::::R
+ *         CCCCCCCCCCCCC     OOOOOOOOO     MMMMMMMM               MMMMMMMMPPPPPPPPPP          IIIIIIIIIILLLLLLLLLLLLLLLLLLLLLLLLEEEEEEEEEEEEEEEEEEEEEERRRRRRRR     RRRRRRR
+ *
+ * =======================================================================================================================================================================
+ * =======================================================================================================================================================================
+ * =======================================================================================================================================================================
+ * =======================================================================================================================================================================
+ */</span>
+
+<span class="token comment">/**
+ * Today we're going to write a compiler together. But not just any compiler... A
+ * super duper teeny tiny compiler! A compiler that is so small that if you
+ * remove all the comments this file would only be ~200 lines of actual code.
+ *
+ * We're going to compile some lisp-like function calls into some C-like
+ * function calls.
+ *
+ * If you are not familiar with one or the other. I'll just give you a quick intro.
+ *
+ * If we had two functions `add` and `subtract` they would be written like this:
+ *
+ *                  LISP                      C
+ *
+ *   2 + 2          (add 2 2)                 add(2, 2)
+ *   4 - 2          (subtract 4 2)            subtract(4, 2)
+ *   2 + (4 - 2)    (add 2 (subtract 4 2))    add(2, subtract(4, 2))
+ *
+ * Easy peezy right?
+ *
+ * Well good, because this is exactly what we are going to compile. While this
+ * is neither a complete LISP or C syntax, it will be enough of the syntax to
+ * demonstrate many of the major pieces of a modern compiler.
+ */</span>
+
+<span class="token comment">/**
+ * Most compilers break down into three primary stages: Parsing, Transformation,
+ * and Code Generation
+ *
+ * 1. *Parsing* is taking raw code and turning it into a more abstract
+ *    representation of the code.
+ *
+ * 2. *Transformation* takes this abstract representation and manipulates to do
+ *    whatever the compiler wants it to.
+ *
+ * 3. *Code Generation* takes the transformed representation of the code and
+ *    turns it into new code.
+ */</span>
+
+<span class="token comment">/**
+ * Parsing
+ * -------
+ *
+ * Parsing typically gets broken down into two phases: Lexical Analysis and
+ * Syntactic Analysis.
+ *
+ * 1. *Lexical Analysis* takes the raw code and splits it apart into these things
+ *    called tokens by a thing called a tokenizer (or lexer).
+ *
+ *    Tokens are an array of tiny little objects that describe an isolated piece
+ *    of the syntax. They could be numbers, labels, punctuation, operators,
+ *    whatever.
+ *
+ * 2. *Syntactic Analysis* takes the tokens and reformats them into a
+ *    representation that describes each part of the syntax and their relation
+ *    to one another. This is known as an intermediate representation or
+ *    Abstract Syntax Tree.
+ *
+ *    An Abstract Syntax Tree, or AST for short, is a deeply nested object that
+ *    represents code in a way that is both easy to work with and tells us a lot
+ *    of information.
+ *
+ * For the following syntax:
+ *
+ *   (add 2 (subtract 4 2))
+ *
+ * Tokens might look something like this:
+ *
+ *   [
+ *     { type: 'paren',  value: '('        },
+ *     { type: 'name',   value: 'add'      },
+ *     { type: 'number', value: '2'        },
+ *     { type: 'paren',  value: '('        },
+ *     { type: 'name',   value: 'subtract' },
+ *     { type: 'number', value: '4'        },
+ *     { type: 'number', value: '2'        },
+ *     { type: 'paren',  value: ')'        },
+ *     { type: 'paren',  value: ')'        },
+ *   ]
+ *
+ * And an Abstract Syntax Tree (AST) might look like this:
+ *
+ *   {
+ *     type: 'Program',
+ *     body: [{
+ *       type: 'CallExpression',
+ *       name: 'add',
+ *       params: [{
+ *         type: 'NumberLiteral',
+ *         value: '2',
+ *       }, {
+ *         type: 'CallExpression',
+ *         name: 'subtract',
+ *         params: [{
+ *           type: 'NumberLiteral',
+ *           value: '4',
+ *         }, {
+ *           type: 'NumberLiteral',
+ *           value: '2',
+ *         }]
+ *       }]
+ *     }]
+ *   }
+ */</span>
+
+<span class="token comment">/**
+ * Transformation
+ * --------------
+ *
+ * The next type of stage for a compiler is transformation. Again, this just
+ * takes the AST from the last step and makes changes to it. It can manipulate
+ * the AST in the same language or it can translate it into an entirely new
+ * language.
+ *
+ * Let’s look at how we would transform an AST.
+ *
+ * You might notice that our AST has elements within it that look very similar.
+ * There are these objects with a type property. Each of these are known as an
+ * AST Node. These nodes have defined properties on them that describe one
+ * isolated part of the tree.
+ *
+ * We can have a node for a &quot;NumberLiteral&quot;:
+ *
+ *   {
+ *     type: 'NumberLiteral',
+ *     value: '2',
+ *   }
+ *
+ * Or maybe a node for a &quot;CallExpression&quot;:
+ *
+ *   {
+ *     type: 'CallExpression',
+ *     name: 'subtract',
+ *     params: [...nested nodes go here...],
+ *   }
+ *
+ * When transforming the AST we can manipulate nodes by
+ * adding/removing/replacing properties, we can add new nodes, remove nodes, or
+ * we could leave the existing AST alone and create an entirely new one based
+ * on it.
+ *
+ * Since we’re targeting a new language, we’re going to focus on creating an
+ * entirely new AST that is specific to the target language.
+ *
+ * Traversal
+ * ---------
+ *
+ * In order to navigate through all of these nodes, we need to be able to
+ * traverse through them. This traversal process goes to each node in the AST
+ * depth-first.
+ *
+ *   {
+ *     type: 'Program',
+ *     body: [{
+ *       type: 'CallExpression',
+ *       name: 'add',
+ *       params: [{
+ *         type: 'NumberLiteral',
+ *         value: '2'
+ *       }, {
+ *         type: 'CallExpression',
+ *         name: 'subtract',
+ *         params: [{
+ *           type: 'NumberLiteral',
+ *           value: '4'
+ *         }, {
+ *           type: 'NumberLiteral',
+ *           value: '2'
+ *         }]
+ *       }]
+ *     }]
+ *   }
+ *
+ * So for the above AST we would go:
+ *
+ *   1. Program - Starting at the top level of the AST
+ *   2. CallExpression (add) - Moving to the first element of the Program's body
+ *   3. NumberLiteral (2) - Moving to the first element of CallExpression's params
+ *   4. CallExpression (subtract) - Moving to the second element of CallExpression's params
+ *   5. NumberLiteral (4) - Moving to the first element of CallExpression's params
+ *   6. NumberLiteral (2) - Moving to the second element of CallExpression's params
+ *
+ * If we were manipulating this AST directly, instead of creating a separate AST,
+ * we would likely introduce all sorts of abstractions here. But just visiting
+ * each node in the tree is enough for what we're trying to do.
+ *
+ * The reason I use the word &quot;visiting&quot; is because there is this pattern of how
+ * to represent operations on elements of an object structure.
+ *
+ * Visitors
+ * --------
+ *
+ * The basic idea here is that we are going to create a “visitor” object that
+ * has methods that will accept different node types.
+ *
+ *   var visitor = {
+ *     NumberLiteral() {},
+ *     CallExpression() {},
+ *   };
+ *
+ * When we traverse our AST, we will call the methods on this visitor whenever we
+ * &quot;enter&quot; a node of a matching type.
+ *
+ * In order to make this useful we will also pass the node and a reference to
+ * the parent node.
+ *
+ *   var visitor = {
+ *     NumberLiteral(node, parent) {},
+ *     CallExpression(node, parent) {},
+ *   };
+ *
+ * However, there also exists the possibility of calling things on &quot;exit&quot;. Imagine
+ * our tree structure from before in list form:
+ *
+ *   - Program
+ *     - CallExpression
+ *       - NumberLiteral
+ *       - CallExpression
+ *         - NumberLiteral
+ *         - NumberLiteral
+ *
+ * As we traverse down, we're going to reach branches with dead ends. As we
+ * finish each branch of the tree we &quot;exit&quot; it. So going down the tree we
+ * &quot;enter&quot; each node, and going back up we &quot;exit&quot;.
+ *
+ *   -&gt; Program (enter)
+ *     -&gt; CallExpression (enter)
+ *       -&gt; Number Literal (enter)
+ *       &lt;- Number Literal (exit)
+ *       -&gt; Call Expression (enter)
+ *          -&gt; Number Literal (enter)
+ *          &lt;- Number Literal (exit)
+ *          -&gt; Number Literal (enter)
+ *          &lt;- Number Literal (exit)
+ *       &lt;- CallExpression (exit)
+ *     &lt;- CallExpression (exit)
+ *   &lt;- Program (exit)
+ *
+ * In order to support that, the final form of our visitor will look like this:
+ *
+ *   var visitor = {
+ *     NumberLiteral: {
+ *       enter(node, parent) {},
+ *       exit(node, parent) {},
+ *     }
+ *   };
+ */</span>
+
+<span class="token comment">/**
+ * Code Generation
+ * ---------------
+ *
+ * The final phase of a compiler is code generation. Sometimes compilers will do
+ * things that overlap with transformation, but for the most part code
+ * generation just means take our AST and string-ify code back out.
+ *
+ * Code generators work several different ways, some compilers will reuse the
+ * tokens from earlier, others will have created a separate representation of
+ * the code so that they can print nodes linearly, but from what I can tell most
+ * will use the same AST we just created, which is what we’re going to focus on.
+ *
+ * Effectively our code generator will know how to “print” all of the different
+ * node types of the AST, and it will recursively call itself to print nested
+ * nodes until everything is printed into one long string of code.
+ */</span>
+
+<span class="token comment">/**
+ * And that's it! That's all the different pieces of a compiler.
+ *
+ * Now that isn’t to say every compiler looks exactly like I described here.
+ * Compilers serve many different purposes, and they might need more steps than
+ * I have detailed.
+ *
+ * But now you should have a general high-level idea of what most compilers look
+ * like.
+ *
+ * Now that I’ve explained all of this, you’re all good to go write your own
+ * compilers right?
+ *
+ * Just kidding, that's what I'm here to help with :P
+ *
+ * So let's begin...
+ */</span>
+
+<span class="token comment">/**
+ * ============================================================================
+ *                                   (/^▽^)/
+ *                                THE TOKENIZER!
+ * ============================================================================
+ */</span>
+
+<span class="token comment">/**
+ * We're gonna start off with our first phase of parsing, lexical analysis, with
+ * the tokenizer.
+ *
+ * We're just going to take our string of code and break it down into an array
+ * of tokens.
+ *
+ *   (add 2 (subtract 4 2))   =&gt;   [{ type: 'paren', value: '(' }, ...]
+ */</span>
+
+<span class="token comment">// We start by accepting an input string of code, and we're gonna set up two</span>
+<span class="token comment">// things...</span>
+<span class="token keyword">function</span> <span class="token function">tokenizer</span><span class="token punctuation">(</span><span class="token parameter">input</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token comment">// A `current` variable for tracking our position in the code like a cursor.</span>
+  <span class="token keyword">let</span> current <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// And a `tokens` array for pushing our tokens to.</span>
+  <span class="token keyword">let</span> tokens <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// We start by creating a `while` loop where we are setting up our `current`</span>
+  <span class="token comment">// variable to be incremented as much as we want `inside` the loop.</span>
+  <span class="token comment">//</span>
+  <span class="token comment">// We do this because we may want to increment `current` many times within a</span>
+  <span class="token comment">// single loop because our tokens can be any length.</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>current <span class="token operator">&lt;</span> input<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token comment">// We're also going to store the `current` character in the `input`.</span>
+    <span class="token keyword">let</span> char <span class="token operator">=</span> input<span class="token punctuation">[</span>current<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// The first thing we want to check for is an open parenthesis. This will</span>
+    <span class="token comment">// later be used for `CallExpression` but for now we only care about the</span>
+    <span class="token comment">// character.</span>
+    <span class="token comment">//</span>
+    <span class="token comment">// We check to see if we have an open parenthesis:</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>char <span class="token operator">===</span> <span class="token string">'('</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+      <span class="token comment">// If we do, we push a new token with the type `paren` and set the value</span>
+      <span class="token comment">// to an open parenthesis.</span>
+      tokens<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        type<span class="token operator">:</span> <span class="token string">'paren'</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> <span class="token string">'('</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// Then we increment `current`</span>
+      current<span class="token operator">++</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// And we `continue` onto the next cycle of the loop.</span>
+      <span class="token keyword">continue</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Next we're going to check for a closing parenthesis. We do the same exact</span>
+    <span class="token comment">// thing as before: Check for a closing parenthesis, add a new token,</span>
+    <span class="token comment">// increment `current`, and `continue`.</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>char <span class="token operator">===</span> <span class="token string">')'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      tokens<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        type<span class="token operator">:</span> <span class="token string">'paren'</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> <span class="token string">')'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      current<span class="token operator">++</span><span class="token punctuation">;</span>
+      <span class="token keyword">continue</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Moving on, we're now going to check for whitespace. This is interesting</span>
+    <span class="token comment">// because we care that whitespace exists to separate characters, but it</span>
+    <span class="token comment">// isn't actually important for us to store as a token. We would only throw</span>
+    <span class="token comment">// it out later.</span>
+    <span class="token comment">//</span>
+    <span class="token comment">// So here we're just going to test for existence and if it does exist we're</span>
+    <span class="token comment">// going to just `continue` on.</span>
+    <span class="token keyword">let</span> <span class="token constant">WHITESPACE</span> <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\s</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token constant">WHITESPACE</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>char<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      current<span class="token operator">++</span><span class="token punctuation">;</span>
+      <span class="token keyword">continue</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// The next type of token is a number. This is different than what we have</span>
+    <span class="token comment">// seen before because a number could be any number of characters and we</span>
+    <span class="token comment">// want to capture the entire sequence of characters as one token.</span>
+    <span class="token comment">//</span>
+    <span class="token comment">//   (add 123 456)</span>
+    <span class="token comment">//        ^^^ ^^^</span>
+    <span class="token comment">//        Only two separate tokens</span>
+    <span class="token comment">//</span>
+    <span class="token comment">// So we start this off when we encounter the first number in a sequence.</span>
+    <span class="token keyword">let</span> <span class="token constant">NUMBERS</span> <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">[0-9]</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token constant">NUMBERS</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>char<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+      <span class="token comment">// We're going to create a `value` string that we are going to push</span>
+      <span class="token comment">// characters to.</span>
+      <span class="token keyword">let</span> value <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// Then we're going to loop through each character in the sequence until</span>
+      <span class="token comment">// we encounter a character that is not a number, pushing each character</span>
+      <span class="token comment">// that is a number to our `value` and incrementing `current` as we go.</span>
+      <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token constant">NUMBERS</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>char<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        value <span class="token operator">+=</span> char<span class="token punctuation">;</span>
+        char <span class="token operator">=</span> input<span class="token punctuation">[</span><span class="token operator">++</span>current<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token comment">// After that we push our `number` token to the `tokens` array.</span>
+      tokens<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> type<span class="token operator">:</span> <span class="token string">'number'</span><span class="token punctuation">,</span> value <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// And we continue on.</span>
+      <span class="token keyword">continue</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// We'll also add support for strings in our language which will be any</span>
+    <span class="token comment">// text surrounded by double quotes (&quot;).</span>
+    <span class="token comment">//</span>
+    <span class="token comment">//   (concat &quot;foo&quot; &quot;bar&quot;)</span>
+    <span class="token comment">//            ^^^   ^^^ string tokens</span>
+    <span class="token comment">//</span>
+    <span class="token comment">// We'll start by checking for the opening quote:</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>char <span class="token operator">===</span> <span class="token string">'&quot;'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// Keep a `value` variable for building up our string token.</span>
+      <span class="token keyword">let</span> value <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// We'll skip the opening double quote in our token.</span>
+      char <span class="token operator">=</span> input<span class="token punctuation">[</span><span class="token operator">++</span>current<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// Then we'll iterate through each character until we reach another</span>
+      <span class="token comment">// double quote.</span>
+      <span class="token keyword">while</span> <span class="token punctuation">(</span>char <span class="token operator">!==</span> <span class="token string">'&quot;'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        value <span class="token operator">+=</span> char<span class="token punctuation">;</span>
+        char <span class="token operator">=</span> input<span class="token punctuation">[</span><span class="token operator">++</span>current<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token comment">// Skip the closing double quote.</span>
+      char <span class="token operator">=</span> input<span class="token punctuation">[</span><span class="token operator">++</span>current<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// And add our `string` token to the `tokens` array.</span>
+      tokens<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> type<span class="token operator">:</span> <span class="token string">'string'</span><span class="token punctuation">,</span> value <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">continue</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// The last type of token will be a `name` token. This is a sequence of</span>
+    <span class="token comment">// letters instead of numbers, that are the names of functions in our lisp</span>
+    <span class="token comment">// syntax.</span>
+    <span class="token comment">//</span>
+    <span class="token comment">//   (add 2 4)</span>
+    <span class="token comment">//    ^^^</span>
+    <span class="token comment">//    Name token</span>
+    <span class="token comment">//</span>
+    <span class="token keyword">let</span> <span class="token constant">LETTERS</span> <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">[a-z]</span><span class="token regex-delimiter">/</span><span class="token regex-flags">i</span></span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token constant">LETTERS</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>char<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> value <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// Again we're just going to loop through all the letters pushing them to</span>
+      <span class="token comment">// a value.</span>
+      <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token constant">LETTERS</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>char<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        value <span class="token operator">+=</span> char<span class="token punctuation">;</span>
+        char <span class="token operator">=</span> input<span class="token punctuation">[</span><span class="token operator">++</span>current<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token comment">// And pushing that value as a token with the type `name` and continuing.</span>
+      tokens<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> type<span class="token operator">:</span> <span class="token string">'name'</span><span class="token punctuation">,</span> value <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">continue</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Finally if we have not matched a character by now, we're going to throw</span>
+    <span class="token comment">// an error and completely exit.</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">TypeError</span><span class="token punctuation">(</span><span class="token string">'I dont know what this character is: '</span> <span class="token operator">+</span> char<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// Then at the end of our `tokenizer` we simply return the tokens array.</span>
+  <span class="token keyword">return</span> tokens<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * ============================================================================
+ *                                 ヽ/❀o ل͜ o\ﾉ
+ *                                THE PARSER!!!
+ * ============================================================================
+ */</span>
+
+<span class="token comment">/**
+ * For our parser we're going to take our array of tokens and turn it into an
+ * AST.
+ *
+ *   [{ type: 'paren', value: '(' }, ...]   =&gt;   { type: 'Program', body: [...] }
+ */</span>
+
+<span class="token comment">// Okay, so we define a `parser` function that accepts our array of `tokens`.</span>
+<span class="token keyword">function</span> <span class="token function">parser</span><span class="token punctuation">(</span><span class="token parameter">tokens</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token comment">// Again we keep a `current` variable that we will use as a cursor.</span>
+  <span class="token keyword">let</span> current <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// But this time we're going to use recursion instead of a `while` loop. So we</span>
+  <span class="token comment">// define a `walk` function.</span>
+  <span class="token keyword">function</span> <span class="token function">walk</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token comment">// Inside the walk function we start by grabbing the `current` token.</span>
+    <span class="token keyword">let</span> token <span class="token operator">=</span> tokens<span class="token punctuation">[</span>current<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// We're going to split each type of token off into a different code path,</span>
+    <span class="token comment">// starting off with `number` tokens.</span>
+    <span class="token comment">//</span>
+    <span class="token comment">// We test to see if we have a `number` token.</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>token<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">'number'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+      <span class="token comment">// If we have one, we'll increment `current`.</span>
+      current<span class="token operator">++</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// And we'll return a new AST node called `NumberLiteral` and setting its</span>
+      <span class="token comment">// value to the value of our token.</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        type<span class="token operator">:</span> <span class="token string">'NumberLiteral'</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> token<span class="token punctuation">.</span>value<span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// If we have a string we will do the same as number and create a</span>
+    <span class="token comment">// `StringLiteral` node.</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>token<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">'string'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      current<span class="token operator">++</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        type<span class="token operator">:</span> <span class="token string">'StringLiteral'</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> token<span class="token punctuation">.</span>value<span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Next we're going to look for CallExpressions. We start this off when we</span>
+    <span class="token comment">// encounter an open parenthesis.</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>
+      token<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">'paren'</span> <span class="token operator">&amp;&amp;</span>
+      token<span class="token punctuation">.</span>value <span class="token operator">===</span> <span class="token string">'('</span>
+    <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+      <span class="token comment">// We'll increment `current` to skip the parenthesis since we don't care</span>
+      <span class="token comment">// about it in our AST.</span>
+      token <span class="token operator">=</span> tokens<span class="token punctuation">[</span><span class="token operator">++</span>current<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// We create a base node with the type `CallExpression`, and we're going</span>
+      <span class="token comment">// to set the name as the current token's value since the next token after</span>
+      <span class="token comment">// the open parenthesis is the name of the function.</span>
+      <span class="token keyword">let</span> node <span class="token operator">=</span> <span class="token punctuation">{</span>
+        type<span class="token operator">:</span> <span class="token string">'CallExpression'</span><span class="token punctuation">,</span>
+        name<span class="token operator">:</span> token<span class="token punctuation">.</span>value<span class="token punctuation">,</span>
+        params<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// We increment `current` *again* to skip the name token.</span>
+      token <span class="token operator">=</span> tokens<span class="token punctuation">[</span><span class="token operator">++</span>current<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// And now we want to loop through each token that will be the `params` of</span>
+      <span class="token comment">// our `CallExpression` until we encounter a closing parenthesis.</span>
+      <span class="token comment">//</span>
+      <span class="token comment">// Now this is where recursion comes in. Instead of trying to parse a</span>
+      <span class="token comment">// potentially infinitely nested set of nodes we're going to rely on</span>
+      <span class="token comment">// recursion to resolve things.</span>
+      <span class="token comment">//</span>
+      <span class="token comment">// To explain this, let's take our Lisp code. You can see that the</span>
+      <span class="token comment">// parameters of the `add` are a number and a nested `CallExpression` that</span>
+      <span class="token comment">// includes its own numbers.</span>
+      <span class="token comment">//</span>
+      <span class="token comment">//   (add 2 (subtract 4 2))</span>
+      <span class="token comment">//</span>
+      <span class="token comment">// You'll also notice that in our tokens array we have multiple closing</span>
+      <span class="token comment">// parenthesis.</span>
+      <span class="token comment">//</span>
+      <span class="token comment">//   [</span>
+      <span class="token comment">//     { type: 'paren',  value: '('        },</span>
+      <span class="token comment">//     { type: 'name',   value: 'add'      },</span>
+      <span class="token comment">//     { type: 'number', value: '2'        },</span>
+      <span class="token comment">//     { type: 'paren',  value: '('        },</span>
+      <span class="token comment">//     { type: 'name',   value: 'subtract' },</span>
+      <span class="token comment">//     { type: 'number', value: '4'        },</span>
+      <span class="token comment">//     { type: 'number', value: '2'        },</span>
+      <span class="token comment">//     { type: 'paren',  value: ')'        }, &lt;&lt;&lt; Closing parenthesis</span>
+      <span class="token comment">//     { type: 'paren',  value: ')'        }, &lt;&lt;&lt; Closing parenthesis</span>
+      <span class="token comment">//   ]</span>
+      <span class="token comment">//</span>
+      <span class="token comment">// We're going to rely on the nested `walk` function to increment our</span>
+      <span class="token comment">// `current` variable past any nested `CallExpression`.</span>
+
+      <span class="token comment">// So we create a `while` loop that will continue until it encounters a</span>
+      <span class="token comment">// token with a `type` of `'paren'` and a `value` of a closing</span>
+      <span class="token comment">// parenthesis.</span>
+      <span class="token keyword">while</span> <span class="token punctuation">(</span>
+        <span class="token punctuation">(</span>token<span class="token punctuation">.</span>type <span class="token operator">!==</span> <span class="token string">'paren'</span><span class="token punctuation">)</span> <span class="token operator">||</span>
+        <span class="token punctuation">(</span>token<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">'paren'</span> <span class="token operator">&amp;&amp;</span> token<span class="token punctuation">.</span>value <span class="token operator">!==</span> <span class="token string">')'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// we'll call the `walk` function which will return a `node` and we'll</span>
+        <span class="token comment">// push it into our `node.params`.</span>
+        node<span class="token punctuation">.</span>params<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token function">walk</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        token <span class="token operator">=</span> tokens<span class="token punctuation">[</span>current<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token comment">// Finally we will increment `current` one last time to skip the closing</span>
+      <span class="token comment">// parenthesis.</span>
+      current<span class="token operator">++</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// And return the node.</span>
+      <span class="token keyword">return</span> node<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Again, if we haven't recognized the token type by now we're going to</span>
+    <span class="token comment">// throw an error.</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">TypeError</span><span class="token punctuation">(</span>token<span class="token punctuation">.</span>type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// Now, we're going to create our AST which will have a root which is a</span>
+  <span class="token comment">// `Program` node.</span>
+  <span class="token keyword">let</span> ast <span class="token operator">=</span> <span class="token punctuation">{</span>
+    type<span class="token operator">:</span> <span class="token string">'Program'</span><span class="token punctuation">,</span>
+    body<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// And we're going to kickstart our `walk` function, pushing nodes to our</span>
+  <span class="token comment">// `ast.body` array.</span>
+  <span class="token comment">//</span>
+  <span class="token comment">// The reason we are doing this inside a loop is because our program can have</span>
+  <span class="token comment">// `CallExpression` after one another instead of being nested.</span>
+  <span class="token comment">//</span>
+  <span class="token comment">//   (add 2 2)</span>
+  <span class="token comment">//   (subtract 4 2)</span>
+  <span class="token comment">//</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>current <span class="token operator">&lt;</span> tokens<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ast<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token function">walk</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// At the end of our parser we'll return the AST.</span>
+  <span class="token keyword">return</span> ast<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * ============================================================================
+ *                                 ⌒(❀&gt;◞౪◟&lt;❀)⌒
+ *                               THE TRAVERSER!!!
+ * ============================================================================
+ */</span>
+
+<span class="token comment">/**
+ * So now we have our AST, and we want to be able to visit different nodes with
+ * a visitor. We need to be able to call the methods on the visitor whenever we
+ * encounter a node with a matching type.
+ *
+ *   traverse(ast, {
+ *     Program: {
+ *       enter(node, parent) {
+ *         // ...
+ *       },
+ *       exit(node, parent) {
+ *         // ...
+ *       },
+ *     },
+ *
+ *     CallExpression: {
+ *       enter(node, parent) {
+ *         // ...
+ *       },
+ *       exit(node, parent) {
+ *         // ...
+ *       },
+ *     },
+ *
+ *     NumberLiteral: {
+ *       enter(node, parent) {
+ *         // ...
+ *       },
+ *       exit(node, parent) {
+ *         // ...
+ *       },
+ *     },
+ *   });
+ */</span>
+
+<span class="token comment">// So we define a traverser function which accepts an AST and a</span>
+<span class="token comment">// visitor. Inside we're going to define two functions...</span>
+<span class="token keyword">function</span> <span class="token function">traverser</span><span class="token punctuation">(</span><span class="token parameter">ast<span class="token punctuation">,</span> visitor</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token comment">// A `traverseArray` function that will allow us to iterate over an array and</span>
+  <span class="token comment">// call the next function that we will define: `traverseNode`.</span>
+  <span class="token keyword">function</span> <span class="token function">traverseArray</span><span class="token punctuation">(</span><span class="token parameter">array<span class="token punctuation">,</span> parent</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    array<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">child</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token function">traverseNode</span><span class="token punctuation">(</span>child<span class="token punctuation">,</span> parent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// `traverseNode` will accept a `node` and its `parent` node. So that it can</span>
+  <span class="token comment">// pass both to our visitor methods.</span>
+  <span class="token keyword">function</span> <span class="token function">traverseNode</span><span class="token punctuation">(</span><span class="token parameter">node<span class="token punctuation">,</span> parent</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token comment">// We start by testing for the existence of a method on the visitor with a</span>
+    <span class="token comment">// matching `type`.</span>
+    <span class="token keyword">let</span> methods <span class="token operator">=</span> visitor<span class="token punctuation">[</span>node<span class="token punctuation">.</span>type<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// If there is an `enter` method for this node type we'll call it with the</span>
+    <span class="token comment">// `node` and its `parent`.</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>methods <span class="token operator">&amp;&amp;</span> methods<span class="token punctuation">.</span>enter<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      methods<span class="token punctuation">.</span><span class="token function">enter</span><span class="token punctuation">(</span>node<span class="token punctuation">,</span> parent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Next we are going to split things up by the current node type.</span>
+    <span class="token keyword">switch</span> <span class="token punctuation">(</span>node<span class="token punctuation">.</span>type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+      <span class="token comment">// We'll start with our top level `Program`. Since Program nodes have a</span>
+      <span class="token comment">// property named body that has an array of nodes, we will call</span>
+      <span class="token comment">// `traverseArray` to traverse down into them.</span>
+      <span class="token comment">//</span>
+      <span class="token comment">// (Remember that `traverseArray` will in turn call `traverseNode` so  we</span>
+      <span class="token comment">// are causing the tree to be traversed recursively)</span>
+      <span class="token keyword">case</span> <span class="token string">'Program'</span><span class="token operator">:</span>
+        <span class="token function">traverseArray</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>body<span class="token punctuation">,</span> node<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// Next we do the same with `CallExpression` and traverse their `params`.</span>
+      <span class="token keyword">case</span> <span class="token string">'CallExpression'</span><span class="token operator">:</span>
+        <span class="token function">traverseArray</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>params<span class="token punctuation">,</span> node<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// In the cases of `NumberLiteral` and `StringLiteral` we don't have any</span>
+      <span class="token comment">// child nodes to visit, so we'll just break.</span>
+      <span class="token keyword">case</span> <span class="token string">'NumberLiteral'</span><span class="token operator">:</span>
+      <span class="token keyword">case</span> <span class="token string">'StringLiteral'</span><span class="token operator">:</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// And again, if we haven't recognized the node type then we'll throw an</span>
+      <span class="token comment">// error.</span>
+      <span class="token keyword">default</span><span class="token operator">:</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">TypeError</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// If there is an `exit` method for this node type we'll call it with the</span>
+    <span class="token comment">// `node` and its `parent`.</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>methods <span class="token operator">&amp;&amp;</span> methods<span class="token punctuation">.</span>exit<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      methods<span class="token punctuation">.</span><span class="token function">exit</span><span class="token punctuation">(</span>node<span class="token punctuation">,</span> parent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// Finally we kickstart the traverser by calling `traverseNode` with our ast</span>
+  <span class="token comment">// with no `parent` because the top level of the AST doesn't have a parent.</span>
+  <span class="token function">traverseNode</span><span class="token punctuation">(</span>ast<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * ============================================================================
+ *                                   ⁽(◍˃̵͈̑ᴗ˂̵͈̑)⁽
+ *                              THE TRANSFORMER!!!
+ * ============================================================================
+ */</span>
+
+<span class="token comment">/**
+ * Next up, the transformer. Our transformer is going to take the AST that we
+ * have built and pass it to our traverser function with a visitor and will
+ * create a new ast.
+ *
+ * ----------------------------------------------------------------------------
+ *   Original AST                     |   Transformed AST
+ * ----------------------------------------------------------------------------
+ *   {                                |   {
+ *     type: 'Program',               |     type: 'Program',
+ *     body: [{                       |     body: [{
+ *       type: 'CallExpression',      |       type: 'ExpressionStatement',
+ *       name: 'add',                 |       expression: {
+ *       params: [{                   |         type: 'CallExpression',
+ *         type: 'NumberLiteral',     |         callee: {
+ *         value: '2'                 |           type: 'Identifier',
+ *       }, {                         |           name: 'add'
+ *         type: 'CallExpression',    |         },
+ *         name: 'subtract',          |         arguments: [{
+ *         params: [{                 |           type: 'NumberLiteral',
+ *           type: 'NumberLiteral',   |           value: '2'
+ *           value: '4'               |         }, {
+ *         }, {                       |           type: 'CallExpression',
+ *           type: 'NumberLiteral',   |           callee: {
+ *           value: '2'               |             type: 'Identifier',
+ *         }]                         |             name: 'subtract'
+ *       }]                           |           },
+ *     }]                             |           arguments: [{
+ *   }                                |             type: 'NumberLiteral',
+ *                                    |             value: '4'
+ * ---------------------------------- |           }, {
+ *                                    |             type: 'NumberLiteral',
+ *                                    |             value: '2'
+ *                                    |           }]
+ *  (sorry the other one is longer.)  |         }
+ *                                    |       }
+ *                                    |     }]
+ *                                    |   }
+ * ----------------------------------------------------------------------------
+ */</span>
+
+<span class="token comment">// So we have our transformer function which will accept the lisp ast.</span>
+<span class="token keyword">function</span> <span class="token function">transformer</span><span class="token punctuation">(</span><span class="token parameter">ast</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token comment">// We'll create a `newAst` which like our previous AST will have a program</span>
+  <span class="token comment">// node.</span>
+  <span class="token keyword">let</span> newAst <span class="token operator">=</span> <span class="token punctuation">{</span>
+    type<span class="token operator">:</span> <span class="token string">'Program'</span><span class="token punctuation">,</span>
+    body<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// Next I'm going to cheat a little and create a bit of a hack. We're going to</span>
+  <span class="token comment">// use a property named `context` on our parent nodes that we're going to push</span>
+  <span class="token comment">// nodes to their parent's `context`. Normally you would have a better</span>
+  <span class="token comment">// abstraction than this, but for our purposes this keeps things simple.</span>
+  <span class="token comment">//</span>
+  <span class="token comment">// Just take note that the context is a reference *from* the old ast *to* the</span>
+  <span class="token comment">// new ast.</span>
+  ast<span class="token punctuation">.</span>_context <span class="token operator">=</span> newAst<span class="token punctuation">.</span>body<span class="token punctuation">;</span>
+
+  <span class="token comment">// We'll start by calling the traverser function with our ast and a visitor.</span>
+  <span class="token function">traverser</span><span class="token punctuation">(</span>ast<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+
+    <span class="token comment">// The first visitor method accepts any `NumberLiteral`</span>
+    NumberLiteral<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// We'll visit them on enter.</span>
+      <span class="token function">enter</span><span class="token punctuation">(</span><span class="token parameter">node<span class="token punctuation">,</span> parent</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// We'll create a new node also named `NumberLiteral` that we will push to</span>
+        <span class="token comment">// the parent context.</span>
+        parent<span class="token punctuation">.</span>_context<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">'NumberLiteral'</span><span class="token punctuation">,</span>
+          value<span class="token operator">:</span> node<span class="token punctuation">.</span>value<span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+    <span class="token comment">// Next we have `StringLiteral`</span>
+    StringLiteral<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token function">enter</span><span class="token punctuation">(</span><span class="token parameter">node<span class="token punctuation">,</span> parent</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        parent<span class="token punctuation">.</span>_context<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">'StringLiteral'</span><span class="token punctuation">,</span>
+          value<span class="token operator">:</span> node<span class="token punctuation">.</span>value<span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+    <span class="token comment">// Next up, `CallExpression`.</span>
+    CallExpression<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token function">enter</span><span class="token punctuation">(</span><span class="token parameter">node<span class="token punctuation">,</span> parent</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+        <span class="token comment">// We start creating a new node `CallExpression` with a nested</span>
+        <span class="token comment">// `Identifier`.</span>
+        <span class="token keyword">let</span> expression <span class="token operator">=</span> <span class="token punctuation">{</span>
+          type<span class="token operator">:</span> <span class="token string">'CallExpression'</span><span class="token punctuation">,</span>
+          callee<span class="token operator">:</span> <span class="token punctuation">{</span>
+            type<span class="token operator">:</span> <span class="token string">'Identifier'</span><span class="token punctuation">,</span>
+            name<span class="token operator">:</span> node<span class="token punctuation">.</span>name<span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          arguments<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Next we're going to define a new context on the original</span>
+        <span class="token comment">// `CallExpression` node that will reference the `expression`'s arguments</span>
+        <span class="token comment">// so that we can push arguments.</span>
+        node<span class="token punctuation">.</span>_context <span class="token operator">=</span> expression<span class="token punctuation">.</span>arguments<span class="token punctuation">;</span>
+
+        <span class="token comment">// Then we're going to check if the parent node is a `CallExpression`.</span>
+        <span class="token comment">// If it is not...</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>parent<span class="token punctuation">.</span>type <span class="token operator">!==</span> <span class="token string">'CallExpression'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+          <span class="token comment">// We're going to wrap our `CallExpression` node with an</span>
+          <span class="token comment">// `ExpressionStatement`. We do this because the top level</span>
+          <span class="token comment">// `CallExpression` in JavaScript are actually statements.</span>
+          expression <span class="token operator">=</span> <span class="token punctuation">{</span>
+            type<span class="token operator">:</span> <span class="token string">'ExpressionStatement'</span><span class="token punctuation">,</span>
+            expression<span class="token operator">:</span> expression<span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// Last, we push our (possibly wrapped) `CallExpression` to the `parent`'s</span>
+        <span class="token comment">// `context`.</span>
+        parent<span class="token punctuation">.</span>_context<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>expression<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// At the end of our transformer function we'll return the new ast that we</span>
+  <span class="token comment">// just created.</span>
+  <span class="token keyword">return</span> newAst<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * ============================================================================
+ *                               ヾ（〃＾∇＾）ﾉ♪
+ *                            THE CODE GENERATOR!!!!
+ * ============================================================================
+ */</span>
+
+<span class="token comment">/**
+ * Now let's move onto our last phase: The Code Generator.
+ *
+ * Our code generator is going to recursively call itself to print each node in
+ * the tree into one giant string.
+ */</span>
+
+<span class="token keyword">function</span> <span class="token function">codeGenerator</span><span class="token punctuation">(</span><span class="token parameter">node</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token comment">// We'll break things down by the `type` of the `node`.</span>
+  <span class="token keyword">switch</span> <span class="token punctuation">(</span>node<span class="token punctuation">.</span>type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token comment">// If we have a `Program` node. We will map through each node in the `body`</span>
+    <span class="token comment">// and run them through the code generator and join them with a newline.</span>
+    <span class="token keyword">case</span> <span class="token string">'Program'</span><span class="token operator">:</span>
+      <span class="token keyword">return</span> node<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>codeGenerator<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">'\n'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// For `ExpressionStatement` we'll call the code generator on the nested</span>
+    <span class="token comment">// expression and we'll add a semicolon...</span>
+    <span class="token keyword">case</span> <span class="token string">'ExpressionStatement'</span><span class="token operator">:</span>
+      <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token function">codeGenerator</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>expression<span class="token punctuation">)</span> <span class="token operator">+</span>
+        <span class="token string">';'</span> <span class="token comment">// &lt;&lt; (...because we like to code the *correct* way)</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// For `CallExpression` we will print the `callee`, add an open</span>
+    <span class="token comment">// parenthesis, we'll map through each node in the `arguments` array and run</span>
+    <span class="token comment">// them through the code generator, joining them with a comma, and then</span>
+    <span class="token comment">// we'll add a closing parenthesis.</span>
+    <span class="token keyword">case</span> <span class="token string">'CallExpression'</span><span class="token operator">:</span>
+      <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token function">codeGenerator</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>callee<span class="token punctuation">)</span> <span class="token operator">+</span>
+        <span class="token string">'('</span> <span class="token operator">+</span>
+        node<span class="token punctuation">.</span>arguments<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>codeGenerator<span class="token punctuation">)</span>
+          <span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">', '</span><span class="token punctuation">)</span> <span class="token operator">+</span>
+        <span class="token string">')'</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// For `Identifier` we'll just return the `node`'s name.</span>
+    <span class="token keyword">case</span> <span class="token string">'Identifier'</span><span class="token operator">:</span>
+      <span class="token keyword">return</span> node<span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+
+    <span class="token comment">// For `NumberLiteral` we'll just return the `node`'s value.</span>
+    <span class="token keyword">case</span> <span class="token string">'NumberLiteral'</span><span class="token operator">:</span>
+      <span class="token keyword">return</span> node<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+
+    <span class="token comment">// For `StringLiteral` we'll add quotations around the `node`'s value.</span>
+    <span class="token keyword">case</span> <span class="token string">'StringLiteral'</span><span class="token operator">:</span>
+      <span class="token keyword">return</span> <span class="token string">'&quot;'</span> <span class="token operator">+</span> node<span class="token punctuation">.</span>value <span class="token operator">+</span> <span class="token string">'&quot;'</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// And if we haven't recognized the node, we'll throw an error.</span>
+    <span class="token keyword">default</span><span class="token operator">:</span>
+      <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">TypeError</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * ============================================================================
+ *                                  (۶* ‘ヮ’)۶”
+ *                         !!!!!!!!THE COMPILER!!!!!!!!
+ * ============================================================================
+ */</span>
+
+<span class="token comment">/**
+ * FINALLY! We'll create our `compiler` function. Here we will link together
+ * every part of the pipeline.
+ *
+ *   1. input  =&gt; tokenizer   =&gt; tokens
+ *   2. tokens =&gt; parser      =&gt; ast
+ *   3. ast    =&gt; transformer =&gt; newAst
+ *   4. newAst =&gt; generator   =&gt; output
+ */</span>
+
+<span class="token keyword">function</span> <span class="token function">compiler</span><span class="token punctuation">(</span><span class="token parameter">input</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> tokens <span class="token operator">=</span> <span class="token function">tokenizer</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> ast    <span class="token operator">=</span> <span class="token function">parser</span><span class="token punctuation">(</span>tokens<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> newAst <span class="token operator">=</span> <span class="token function">transformer</span><span class="token punctuation">(</span>ast<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> output <span class="token operator">=</span> <span class="token function">codeGenerator</span><span class="token punctuation">(</span>newAst<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// and simply return the output!</span>
+  <span class="token keyword">return</span> output<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * ============================================================================
+ *                                   (๑˃̵ᴗ˂̵)و
+ * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!YOU MADE IT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ * ============================================================================
+ */</span>
+
+<span class="token comment">// Now I'm just exporting everything...</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  tokenizer<span class="token punctuation">,</span>
+  parser<span class="token punctuation">,</span>
+  traverser<span class="token punctuation">,</span>
+  transformer<span class="token punctuation">,</span>
+  codeGenerator<span class="token punctuation">,</span>
+  compiler<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br><span class="line-number">224</span><br><span class="line-number">225</span><br><span class="line-number">226</span><br><span class="line-number">227</span><br><span class="line-number">228</span><br><span class="line-number">229</span><br><span class="line-number">230</span><br><span class="line-number">231</span><br><span class="line-number">232</span><br><span class="line-number">233</span><br><span class="line-number">234</span><br><span class="line-number">235</span><br><span class="line-number">236</span><br><span class="line-number">237</span><br><span class="line-number">238</span><br><span class="line-number">239</span><br><span class="line-number">240</span><br><span class="line-number">241</span><br><span class="line-number">242</span><br><span class="line-number">243</span><br><span class="line-number">244</span><br><span class="line-number">245</span><br><span class="line-number">246</span><br><span class="line-number">247</span><br><span class="line-number">248</span><br><span class="line-number">249</span><br><span class="line-number">250</span><br><span class="line-number">251</span><br><span class="line-number">252</span><br><span class="line-number">253</span><br><span class="line-number">254</span><br><span class="line-number">255</span><br><span class="line-number">256</span><br><span class="line-number">257</span><br><span class="line-number">258</span><br><span class="line-number">259</span><br><span class="line-number">260</span><br><span class="line-number">261</span><br><span class="line-number">262</span><br><span class="line-number">263</span><br><span class="line-number">264</span><br><span class="line-number">265</span><br><span class="line-number">266</span><br><span class="line-number">267</span><br><span class="line-number">268</span><br><span class="line-number">269</span><br><span class="line-number">270</span><br><span class="line-number">271</span><br><span class="line-number">272</span><br><span class="line-number">273</span><br><span class="line-number">274</span><br><span class="line-number">275</span><br><span class="line-number">276</span><br><span class="line-number">277</span><br><span class="line-number">278</span><br><span class="line-number">279</span><br><span class="line-number">280</span><br><span class="line-number">281</span><br><span class="line-number">282</span><br><span class="line-number">283</span><br><span class="line-number">284</span><br><span class="line-number">285</span><br><span class="line-number">286</span><br><span class="line-number">287</span><br><span class="line-number">288</span><br><span class="line-number">289</span><br><span class="line-number">290</span><br><span class="line-number">291</span><br><span class="line-number">292</span><br><span class="line-number">293</span><br><span class="line-number">294</span><br><span class="line-number">295</span><br><span class="line-number">296</span><br><span class="line-number">297</span><br><span class="line-number">298</span><br><span class="line-number">299</span><br><span class="line-number">300</span><br><span class="line-number">301</span><br><span class="line-number">302</span><br><span class="line-number">303</span><br><span class="line-number">304</span><br><span class="line-number">305</span><br><span class="line-number">306</span><br><span class="line-number">307</span><br><span class="line-number">308</span><br><span class="line-number">309</span><br><span class="line-number">310</span><br><span class="line-number">311</span><br><span class="line-number">312</span><br><span class="line-number">313</span><br><span class="line-number">314</span><br><span class="line-number">315</span><br><span class="line-number">316</span><br><span class="line-number">317</span><br><span class="line-number">318</span><br><span class="line-number">319</span><br><span class="line-number">320</span><br><span class="line-number">321</span><br><span class="line-number">322</span><br><span class="line-number">323</span><br><span class="line-number">324</span><br><span class="line-number">325</span><br><span class="line-number">326</span><br><span class="line-number">327</span><br><span class="line-number">328</span><br><span class="line-number">329</span><br><span class="line-number">330</span><br><span class="line-number">331</span><br><span class="line-number">332</span><br><span class="line-number">333</span><br><span class="line-number">334</span><br><span class="line-number">335</span><br><span class="line-number">336</span><br><span class="line-number">337</span><br><span class="line-number">338</span><br><span class="line-number">339</span><br><span class="line-number">340</span><br><span class="line-number">341</span><br><span class="line-number">342</span><br><span class="line-number">343</span><br><span class="line-number">344</span><br><span class="line-number">345</span><br><span class="line-number">346</span><br><span class="line-number">347</span><br><span class="line-number">348</span><br><span class="line-number">349</span><br><span class="line-number">350</span><br><span class="line-number">351</span><br><span class="line-number">352</span><br><span class="line-number">353</span><br><span class="line-number">354</span><br><span class="line-number">355</span><br><span class="line-number">356</span><br><span class="line-number">357</span><br><span class="line-number">358</span><br><span class="line-number">359</span><br><span class="line-number">360</span><br><span class="line-number">361</span><br><span class="line-number">362</span><br><span class="line-number">363</span><br><span class="line-number">364</span><br><span class="line-number">365</span><br><span class="line-number">366</span><br><span class="line-number">367</span><br><span class="line-number">368</span><br><span class="line-number">369</span><br><span class="line-number">370</span><br><span class="line-number">371</span><br><span class="line-number">372</span><br><span class="line-number">373</span><br><span class="line-number">374</span><br><span class="line-number">375</span><br><span class="line-number">376</span><br><span class="line-number">377</span><br><span class="line-number">378</span><br><span class="line-number">379</span><br><span class="line-number">380</span><br><span class="line-number">381</span><br><span class="line-number">382</span><br><span class="line-number">383</span><br><span class="line-number">384</span><br><span class="line-number">385</span><br><span class="line-number">386</span><br><span class="line-number">387</span><br><span class="line-number">388</span><br><span class="line-number">389</span><br><span class="line-number">390</span><br><span class="line-number">391</span><br><span class="line-number">392</span><br><span class="line-number">393</span><br><span class="line-number">394</span><br><span class="line-number">395</span><br><span class="line-number">396</span><br><span class="line-number">397</span><br><span class="line-number">398</span><br><span class="line-number">399</span><br><span class="line-number">400</span><br><span class="line-number">401</span><br><span class="line-number">402</span><br><span class="line-number">403</span><br><span class="line-number">404</span><br><span class="line-number">405</span><br><span class="line-number">406</span><br><span class="line-number">407</span><br><span class="line-number">408</span><br><span class="line-number">409</span><br><span class="line-number">410</span><br><span class="line-number">411</span><br><span class="line-number">412</span><br><span class="line-number">413</span><br><span class="line-number">414</span><br><span class="line-number">415</span><br><span class="line-number">416</span><br><span class="line-number">417</span><br><span class="line-number">418</span><br><span class="line-number">419</span><br><span class="line-number">420</span><br><span class="line-number">421</span><br><span class="line-number">422</span><br><span class="line-number">423</span><br><span class="line-number">424</span><br><span class="line-number">425</span><br><span class="line-number">426</span><br><span class="line-number">427</span><br><span class="line-number">428</span><br><span class="line-number">429</span><br><span class="line-number">430</span><br><span class="line-number">431</span><br><span class="line-number">432</span><br><span class="line-number">433</span><br><span class="line-number">434</span><br><span class="line-number">435</span><br><span class="line-number">436</span><br><span class="line-number">437</span><br><span class="line-number">438</span><br><span class="line-number">439</span><br><span class="line-number">440</span><br><span class="line-number">441</span><br><span class="line-number">442</span><br><span class="line-number">443</span><br><span class="line-number">444</span><br><span class="line-number">445</span><br><span class="line-number">446</span><br><span class="line-number">447</span><br><span class="line-number">448</span><br><span class="line-number">449</span><br><span class="line-number">450</span><br><span class="line-number">451</span><br><span class="line-number">452</span><br><span class="line-number">453</span><br><span class="line-number">454</span><br><span class="line-number">455</span><br><span class="line-number">456</span><br><span class="line-number">457</span><br><span class="line-number">458</span><br><span class="line-number">459</span><br><span class="line-number">460</span><br><span class="line-number">461</span><br><span class="line-number">462</span><br><span class="line-number">463</span><br><span class="line-number">464</span><br><span class="line-number">465</span><br><span class="line-number">466</span><br><span class="line-number">467</span><br><span class="line-number">468</span><br><span class="line-number">469</span><br><span class="line-number">470</span><br><span class="line-number">471</span><br><span class="line-number">472</span><br><span class="line-number">473</span><br><span class="line-number">474</span><br><span class="line-number">475</span><br><span class="line-number">476</span><br><span class="line-number">477</span><br><span class="line-number">478</span><br><span class="line-number">479</span><br><span class="line-number">480</span><br><span class="line-number">481</span><br><span class="line-number">482</span><br><span class="line-number">483</span><br><span class="line-number">484</span><br><span class="line-number">485</span><br><span class="line-number">486</span><br><span class="line-number">487</span><br><span class="line-number">488</span><br><span class="line-number">489</span><br><span class="line-number">490</span><br><span class="line-number">491</span><br><span class="line-number">492</span><br><span class="line-number">493</span><br><span class="line-number">494</span><br><span class="line-number">495</span><br><span class="line-number">496</span><br><span class="line-number">497</span><br><span class="line-number">498</span><br><span class="line-number">499</span><br><span class="line-number">500</span><br><span class="line-number">501</span><br><span class="line-number">502</span><br><span class="line-number">503</span><br><span class="line-number">504</span><br><span class="line-number">505</span><br><span class="line-number">506</span><br><span class="line-number">507</span><br><span class="line-number">508</span><br><span class="line-number">509</span><br><span class="line-number">510</span><br><span class="line-number">511</span><br><span class="line-number">512</span><br><span class="line-number">513</span><br><span class="line-number">514</span><br><span class="line-number">515</span><br><span class="line-number">516</span><br><span class="line-number">517</span><br><span class="line-number">518</span><br><span class="line-number">519</span><br><span class="line-number">520</span><br><span class="line-number">521</span><br><span class="line-number">522</span><br><span class="line-number">523</span><br><span class="line-number">524</span><br><span class="line-number">525</span><br><span class="line-number">526</span><br><span class="line-number">527</span><br><span class="line-number">528</span><br><span class="line-number">529</span><br><span class="line-number">530</span><br><span class="line-number">531</span><br><span class="line-number">532</span><br><span class="line-number">533</span><br><span class="line-number">534</span><br><span class="line-number">535</span><br><span class="line-number">536</span><br><span class="line-number">537</span><br><span class="line-number">538</span><br><span class="line-number">539</span><br><span class="line-number">540</span><br><span class="line-number">541</span><br><span class="line-number">542</span><br><span class="line-number">543</span><br><span class="line-number">544</span><br><span class="line-number">545</span><br><span class="line-number">546</span><br><span class="line-number">547</span><br><span class="line-number">548</span><br><span class="line-number">549</span><br><span class="line-number">550</span><br><span class="line-number">551</span><br><span class="line-number">552</span><br><span class="line-number">553</span><br><span class="line-number">554</span><br><span class="line-number">555</span><br><span class="line-number">556</span><br><span class="line-number">557</span><br><span class="line-number">558</span><br><span class="line-number">559</span><br><span class="line-number">560</span><br><span class="line-number">561</span><br><span class="line-number">562</span><br><span class="line-number">563</span><br><span class="line-number">564</span><br><span class="line-number">565</span><br><span class="line-number">566</span><br><span class="line-number">567</span><br><span class="line-number">568</span><br><span class="line-number">569</span><br><span class="line-number">570</span><br><span class="line-number">571</span><br><span class="line-number">572</span><br><span class="line-number">573</span><br><span class="line-number">574</span><br><span class="line-number">575</span><br><span class="line-number">576</span><br><span class="line-number">577</span><br><span class="line-number">578</span><br><span class="line-number">579</span><br><span class="line-number">580</span><br><span class="line-number">581</span><br><span class="line-number">582</span><br><span class="line-number">583</span><br><span class="line-number">584</span><br><span class="line-number">585</span><br><span class="line-number">586</span><br><span class="line-number">587</span><br><span class="line-number">588</span><br><span class="line-number">589</span><br><span class="line-number">590</span><br><span class="line-number">591</span><br><span class="line-number">592</span><br><span class="line-number">593</span><br><span class="line-number">594</span><br><span class="line-number">595</span><br><span class="line-number">596</span><br><span class="line-number">597</span><br><span class="line-number">598</span><br><span class="line-number">599</span><br><span class="line-number">600</span><br><span class="line-number">601</span><br><span class="line-number">602</span><br><span class="line-number">603</span><br><span class="line-number">604</span><br><span class="line-number">605</span><br><span class="line-number">606</span><br><span class="line-number">607</span><br><span class="line-number">608</span><br><span class="line-number">609</span><br><span class="line-number">610</span><br><span class="line-number">611</span><br><span class="line-number">612</span><br><span class="line-number">613</span><br><span class="line-number">614</span><br><span class="line-number">615</span><br><span class="line-number">616</span><br><span class="line-number">617</span><br><span class="line-number">618</span><br><span class="line-number">619</span><br><span class="line-number">620</span><br><span class="line-number">621</span><br><span class="line-number">622</span><br><span class="line-number">623</span><br><span class="line-number">624</span><br><span class="line-number">625</span><br><span class="line-number">626</span><br><span class="line-number">627</span><br><span class="line-number">628</span><br><span class="line-number">629</span><br><span class="line-number">630</span><br><span class="line-number">631</span><br><span class="line-number">632</span><br><span class="line-number">633</span><br><span class="line-number">634</span><br><span class="line-number">635</span><br><span class="line-number">636</span><br><span class="line-number">637</span><br><span class="line-number">638</span><br><span class="line-number">639</span><br><span class="line-number">640</span><br><span class="line-number">641</span><br><span class="line-number">642</span><br><span class="line-number">643</span><br><span class="line-number">644</span><br><span class="line-number">645</span><br><span class="line-number">646</span><br><span class="line-number">647</span><br><span class="line-number">648</span><br><span class="line-number">649</span><br><span class="line-number">650</span><br><span class="line-number">651</span><br><span class="line-number">652</span><br><span class="line-number">653</span><br><span class="line-number">654</span><br><span class="line-number">655</span><br><span class="line-number">656</span><br><span class="line-number">657</span><br><span class="line-number">658</span><br><span class="line-number">659</span><br><span class="line-number">660</span><br><span class="line-number">661</span><br><span class="line-number">662</span><br><span class="line-number">663</span><br><span class="line-number">664</span><br><span class="line-number">665</span><br><span class="line-number">666</span><br><span class="line-number">667</span><br><span class="line-number">668</span><br><span class="line-number">669</span><br><span class="line-number">670</span><br><span class="line-number">671</span><br><span class="line-number">672</span><br><span class="line-number">673</span><br><span class="line-number">674</span><br><span class="line-number">675</span><br><span class="line-number">676</span><br><span class="line-number">677</span><br><span class="line-number">678</span><br><span class="line-number">679</span><br><span class="line-number">680</span><br><span class="line-number">681</span><br><span class="line-number">682</span><br><span class="line-number">683</span><br><span class="line-number">684</span><br><span class="line-number">685</span><br><span class="line-number">686</span><br><span class="line-number">687</span><br><span class="line-number">688</span><br><span class="line-number">689</span><br><span class="line-number">690</span><br><span class="line-number">691</span><br><span class="line-number">692</span><br><span class="line-number">693</span><br><span class="line-number">694</span><br><span class="line-number">695</span><br><span class="line-number">696</span><br><span class="line-number">697</span><br><span class="line-number">698</span><br><span class="line-number">699</span><br><span class="line-number">700</span><br><span class="line-number">701</span><br><span class="line-number">702</span><br><span class="line-number">703</span><br><span class="line-number">704</span><br><span class="line-number">705</span><br><span class="line-number">706</span><br><span class="line-number">707</span><br><span class="line-number">708</span><br><span class="line-number">709</span><br><span class="line-number">710</span><br><span class="line-number">711</span><br><span class="line-number">712</span><br><span class="line-number">713</span><br><span class="line-number">714</span><br><span class="line-number">715</span><br><span class="line-number">716</span><br><span class="line-number">717</span><br><span class="line-number">718</span><br><span class="line-number">719</span><br><span class="line-number">720</span><br><span class="line-number">721</span><br><span class="line-number">722</span><br><span class="line-number">723</span><br><span class="line-number">724</span><br><span class="line-number">725</span><br><span class="line-number">726</span><br><span class="line-number">727</span><br><span class="line-number">728</span><br><span class="line-number">729</span><br><span class="line-number">730</span><br><span class="line-number">731</span><br><span class="line-number">732</span><br><span class="line-number">733</span><br><span class="line-number">734</span><br><span class="line-number">735</span><br><span class="line-number">736</span><br><span class="line-number">737</span><br><span class="line-number">738</span><br><span class="line-number">739</span><br><span class="line-number">740</span><br><span class="line-number">741</span><br><span class="line-number">742</span><br><span class="line-number">743</span><br><span class="line-number">744</span><br><span class="line-number">745</span><br><span class="line-number">746</span><br><span class="line-number">747</span><br><span class="line-number">748</span><br><span class="line-number">749</span><br><span class="line-number">750</span><br><span class="line-number">751</span><br><span class="line-number">752</span><br><span class="line-number">753</span><br><span class="line-number">754</span><br><span class="line-number">755</span><br><span class="line-number">756</span><br><span class="line-number">757</span><br><span class="line-number">758</span><br><span class="line-number">759</span><br><span class="line-number">760</span><br><span class="line-number">761</span><br><span class="line-number">762</span><br><span class="line-number">763</span><br><span class="line-number">764</span><br><span class="line-number">765</span><br><span class="line-number">766</span><br><span class="line-number">767</span><br><span class="line-number">768</span><br><span class="line-number">769</span><br><span class="line-number">770</span><br><span class="line-number">771</span><br><span class="line-number">772</span><br><span class="line-number">773</span><br><span class="line-number">774</span><br><span class="line-number">775</span><br><span class="line-number">776</span><br><span class="line-number">777</span><br><span class="line-number">778</span><br><span class="line-number">779</span><br><span class="line-number">780</span><br><span class="line-number">781</span><br><span class="line-number">782</span><br><span class="line-number">783</span><br><span class="line-number">784</span><br><span class="line-number">785</span><br><span class="line-number">786</span><br><span class="line-number">787</span><br><span class="line-number">788</span><br><span class="line-number">789</span><br><span class="line-number">790</span><br><span class="line-number">791</span><br><span class="line-number">792</span><br><span class="line-number">793</span><br><span class="line-number">794</span><br><span class="line-number">795</span><br><span class="line-number">796</span><br><span class="line-number">797</span><br><span class="line-number">798</span><br><span class="line-number">799</span><br><span class="line-number">800</span><br><span class="line-number">801</span><br><span class="line-number">802</span><br><span class="line-number">803</span><br><span class="line-number">804</span><br><span class="line-number">805</span><br><span class="line-number">806</span><br><span class="line-number">807</span><br><span class="line-number">808</span><br><span class="line-number">809</span><br><span class="line-number">810</span><br><span class="line-number">811</span><br><span class="line-number">812</span><br><span class="line-number">813</span><br><span class="line-number">814</span><br><span class="line-number">815</span><br><span class="line-number">816</span><br><span class="line-number">817</span><br><span class="line-number">818</span><br><span class="line-number">819</span><br><span class="line-number">820</span><br><span class="line-number">821</span><br><span class="line-number">822</span><br><span class="line-number">823</span><br><span class="line-number">824</span><br><span class="line-number">825</span><br><span class="line-number">826</span><br><span class="line-number">827</span><br><span class="line-number">828</span><br><span class="line-number">829</span><br><span class="line-number">830</span><br><span class="line-number">831</span><br><span class="line-number">832</span><br><span class="line-number">833</span><br><span class="line-number">834</span><br><span class="line-number">835</span><br><span class="line-number">836</span><br><span class="line-number">837</span><br><span class="line-number">838</span><br><span class="line-number">839</span><br><span class="line-number">840</span><br><span class="line-number">841</span><br><span class="line-number">842</span><br><span class="line-number">843</span><br><span class="line-number">844</span><br><span class="line-number">845</span><br><span class="line-number">846</span><br><span class="line-number">847</span><br><span class="line-number">848</span><br><span class="line-number">849</span><br><span class="line-number">850</span><br><span class="line-number">851</span><br><span class="line-number">852</span><br><span class="line-number">853</span><br><span class="line-number">854</span><br><span class="line-number">855</span><br><span class="line-number">856</span><br><span class="line-number">857</span><br><span class="line-number">858</span><br><span class="line-number">859</span><br><span class="line-number">860</span><br><span class="line-number">861</span><br><span class="line-number">862</span><br><span class="line-number">863</span><br><span class="line-number">864</span><br><span class="line-number">865</span><br><span class="line-number">866</span><br><span class="line-number">867</span><br><span class="line-number">868</span><br><span class="line-number">869</span><br><span class="line-number">870</span><br><span class="line-number">871</span><br><span class="line-number">872</span><br><span class="line-number">873</span><br><span class="line-number">874</span><br><span class="line-number">875</span><br><span class="line-number">876</span><br><span class="line-number">877</span><br><span class="line-number">878</span><br><span class="line-number">879</span><br><span class="line-number">880</span><br><span class="line-number">881</span><br><span class="line-number">882</span><br><span class="line-number">883</span><br><span class="line-number">884</span><br><span class="line-number">885</span><br><span class="line-number">886</span><br><span class="line-number">887</span><br><span class="line-number">888</span><br><span class="line-number">889</span><br><span class="line-number">890</span><br><span class="line-number">891</span><br><span class="line-number">892</span><br><span class="line-number">893</span><br><span class="line-number">894</span><br><span class="line-number">895</span><br><span class="line-number">896</span><br><span class="line-number">897</span><br><span class="line-number">898</span><br><span class="line-number">899</span><br><span class="line-number">900</span><br><span class="line-number">901</span><br><span class="line-number">902</span><br><span class="line-number">903</span><br><span class="line-number">904</span><br><span class="line-number">905</span><br><span class="line-number">906</span><br><span class="line-number">907</span><br><span class="line-number">908</span><br><span class="line-number">909</span><br><span class="line-number">910</span><br><span class="line-number">911</span><br><span class="line-number">912</span><br><span class="line-number">913</span><br><span class="line-number">914</span><br><span class="line-number">915</span><br><span class="line-number">916</span><br><span class="line-number">917</span><br><span class="line-number">918</span><br><span class="line-number">919</span><br><span class="line-number">920</span><br><span class="line-number">921</span><br><span class="line-number">922</span><br><span class="line-number">923</span><br><span class="line-number">924</span><br><span class="line-number">925</span><br><span class="line-number">926</span><br><span class="line-number">927</span><br><span class="line-number">928</span><br><span class="line-number">929</span><br><span class="line-number">930</span><br><span class="line-number">931</span><br><span class="line-number">932</span><br><span class="line-number">933</span><br><span class="line-number">934</span><br><span class="line-number">935</span><br><span class="line-number">936</span><br><span class="line-number">937</span><br><span class="line-number">938</span><br><span class="line-number">939</span><br><span class="line-number">940</span><br><span class="line-number">941</span><br><span class="line-number">942</span><br><span class="line-number">943</span><br><span class="line-number">944</span><br><span class="line-number">945</span><br><span class="line-number">946</span><br><span class="line-number">947</span><br><span class="line-number">948</span><br><span class="line-number">949</span><br><span class="line-number">950</span><br><span class="line-number">951</span><br><span class="line-number">952</span><br><span class="line-number">953</span><br><span class="line-number">954</span><br><span class="line-number">955</span><br><span class="line-number">956</span><br><span class="line-number">957</span><br><span class="line-number">958</span><br><span class="line-number">959</span><br><span class="line-number">960</span><br><span class="line-number">961</span><br><span class="line-number">962</span><br><span class="line-number">963</span><br><span class="line-number">964</span><br><span class="line-number">965</span><br><span class="line-number">966</span><br><span class="line-number">967</span><br><span class="line-number">968</span><br><span class="line-number">969</span><br><span class="line-number">970</span><br><span class="line-number">971</span><br><span class="line-number">972</span><br><span class="line-number">973</span><br><span class="line-number">974</span><br><span class="line-number">975</span><br><span class="line-number">976</span><br><span class="line-number">977</span><br><span class="line-number">978</span><br><span class="line-number">979</span><br><span class="line-number">980</span><br><span class="line-number">981</span><br><span class="line-number">982</span><br><span class="line-number">983</span><br><span class="line-number">984</span><br><span class="line-number">985</span><br><span class="line-number">986</span><br><span class="line-number">987</span><br><span class="line-number">988</span><br><span class="line-number">989</span><br><span class="line-number">990</span><br><span class="line-number">991</span><br><span class="line-number">992</span><br><span class="line-number">993</span><br><span class="line-number">994</span><br><span class="line-number">995</span><br><span class="line-number">996</span><br><span class="line-number">997</span><br><span class="line-number">998</span><br><span class="line-number">999</span><br><span class="line-number">1000</span><br><span class="line-number">1001</span><br><span class="line-number">1002</span><br><span class="line-number">1003</span><br><span class="line-number">1004</span><br><span class="line-number">1005</span><br><span class="line-number">1006</span><br><span class="line-number">1007</span><br><span class="line-number">1008</span><br><span class="line-number">1009</span><br><span class="line-number">1010</span><br><span class="line-number">1011</span><br><span class="line-number">1012</span><br><span class="line-number">1013</span><br><span class="line-number">1014</span><br><span class="line-number">1015</span><br><span class="line-number">1016</span><br><span class="line-number">1017</span><br><span class="line-number">1018</span><br><span class="line-number">1019</span><br><span class="line-number">1020</span><br><span class="line-number">1021</span><br><span class="line-number">1022</span><br><span class="line-number">1023</span><br><span class="line-number">1024</span><br><span class="line-number">1025</span><br><span class="line-number">1026</span><br><span class="line-number">1027</span><br><span class="line-number">1028</span><br><span class="line-number">1029</span><br><span class="line-number">1030</span><br><span class="line-number">1031</span><br><span class="line-number">1032</span><br><span class="line-number">1033</span><br><span class="line-number">1034</span><br><span class="line-number">1035</span><br><span class="line-number">1036</span><br><span class="line-number">1037</span><br><span class="line-number">1038</span><br><span class="line-number">1039</span><br><span class="line-number">1040</span><br><span class="line-number">1041</span><br><span class="line-number">1042</span><br><span class="line-number">1043</span><br><span class="line-number">1044</span><br><span class="line-number">1045</span><br><span class="line-number">1046</span><br><span class="line-number">1047</span><br><span class="line-number">1048</span><br><span class="line-number">1049</span><br><span class="line-number">1050</span><br><span class="line-number">1051</span><br><span class="line-number">1052</span><br><span class="line-number">1053</span><br></div></div></div></div> <div class="page-edit"><div class="tags"><a href="/blogs/tags/?tag=%E5%B7%A5%E5%85%B7%E6%8F%92%E4%BB%B6" title="标签">#工具插件</a><a href="/blogs/tags/?tag=%E7%BC%96%E8%AF%91%E5%99%A8" title="标签">#编译器</a><a href="/blogs/tags/?tag=ast" title="标签">#ast</a></div> <div class="last-updated"><span class="prefix">最近更新时间：</span> <span class="time">2021/03/11 10:03:05</span></div></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/blogs/web/tools/3340540b69596/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">Snipaste：简单、强大的截图、取色工具</div></a> <a href="/blogs/web/tools/astexplorer/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">AST Explorer</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/blogs/web/tools/3340540b69596/" class="prev">Snipaste：简单、强大的截图、取色工具</a></span> <span class="next"><a href="/blogs/web/tools/astexplorer/">AST Explorer</a>→
+      </span></p></div></div></div> <div class="theme-vdoing-wrapper article-list bg-style-9"><div class="article-title"><a href="/blogs/archives/" class="fa fa-pencil-alt">
+      最近更新
+    </a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><div><a href="/blogs/golang/book-notes/the-way-to-go/b451871c7ebf3/"><div>总结和增强</div></a></div> <div class="date"><span>2021/03/16 19:29:10</span></div></dt></dl><dl><dd>02</dd> <dt><div><a href="/blogs/golang/book-notes/the-way-to-go/af1d6a84a8f0c/"><div>使用代理缓存</div></a></div> <div class="date"><span>2021/03/16 19:28:46</span></div></dt></dl><dl><dd>03</dd> <dt><div><a href="/blogs/golang/book-notes/the-way-to-go/49b0f32997236/"><div>版本 5 - 分布式程序</div></a></div> <div class="date"><span>2021/03/16 19:28:23</span></div></dt></dl> <div class="more-box"><a href="/blogs/archives/" class="more"><i class="fas fa-angle-double-right"></i>前往更多 ...
+      </a></div></div></div> <div class="comments-wrapper" style="display:none;"><!----></div></main></div> <div class="footer-wrapper" data-v-ae53833e data-v-ae53833e><span class="footer-reco-theme" data-v-ae53833e><i class="iconfont reco-theme" data-v-ae53833e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-ae53833e>vuepress-theme-reco@1.6.1</a> <a target="blank" href="https://doc.xugaoyi.com/" class="vdoing ml5" data-v-ae53833e>vuepress-theme-vdoing@1.7.2</a></span> <!----> <span class="footer-copyright" data-v-ae53833e><i class="iconfont reco-copyright" data-v-ae53833e></i> <a data-v-ae53833e><span data-v-ae53833e>凯小默</span> <span class="ml5" data-v-ae53833e>
+          2019 - 2021
+        </span></a></span> <span class="footer-view-site" data-v-ae53833e><i class="iconfont reco-eye" data-v-ae53833e></i> <span id="busuanzi_container_site_uv" data-v-ae53833e>
+        访客数：<span id="busuanzi_value_site_uv" class="num" data-v-ae53833e>-</span></span> <span id="busuanzi_container_site_pv" class="ml5" data-v-ae53833e>
+        访问量：<span id="busuanzi_value_site_pv" class="num" data-v-ae53833e>-</span></span></span> <!----></div> <!----></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><!----><div></div><APlayer audio="" fixed="true" mini="true" theme="#3eaf7c" loop="loop" order="random" preload="auto" volume="1" mutex="true" lrc-type="0" list-folded="true" list-max-height="250" storage-name="vuepress-plugin-meting" id="aplayer-fixed"></APlayer></div></div>
+    <script src="/blogs/assets/js/app.b6577c57.js" defer></script><script src="/blogs/assets/js/2.44f167e6.js" defer></script><script src="/blogs/assets/js/105.37d6cfdf.js" defer></script><script src="/blogs/assets/js/10.3a18c1d1.js" defer></script>
+  </body>
+</html>
